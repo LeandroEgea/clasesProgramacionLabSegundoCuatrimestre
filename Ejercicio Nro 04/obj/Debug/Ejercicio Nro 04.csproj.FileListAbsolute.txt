@@ -1,0 +1,7 @@
+D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 04\bin\Debug\Ejercicio Nro 04.exe.config
+D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 04\bin\Debug\Ejercicio Nro 04.exe
+D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 04\bin\Debug\Ejercicio Nro 04.pdb
+D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 04\obj\Debug\Ejercicio Nro 04.csprojAssemblyReference.cache
+D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 04\obj\Debug\Ejercicio Nro 04.csproj.CoreCompileInputs.cache
+D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 04\obj\Debug\Ejercicio Nro 04.exe
+D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 04\obj\Debug\Ejercicio Nro 04.pdb

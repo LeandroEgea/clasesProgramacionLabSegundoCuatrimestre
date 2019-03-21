@@ -10,55 +10,35 @@ namespace Ejercicion_Nro_01
     {
         static void Main(string[] args)
         {
-            bool error = false;
-            int numero;
-            Console.WriteLine("Escriba un numero");
+            int numerosPerfectos = 0;
+            int numero = 1;
+            Console.WriteLine("Numeros Perfectos");
             do
             {
-                if (!int.TryParse(Console.ReadLine(), out numero) || numero < 0)
+                if (esNumeroPerfecto(numero))
                 {
-                    Console.WriteLine("Error. Reingrese numero mayor a 0");
-                    error = true;
+                    Console.WriteLine(numero);
+                    numerosPerfectos++;
                 }
-                else
-                    error = false;
-            } while (error);
-            if (numero < 2)
-            {
-                Console.WriteLine("No hay numeros primos.");
-            }
-            else
-            {
-                Console.WriteLine("Numeros Primos:");
-                for (int i = 2; i <= numero; i++)
-                {
-                    if (esPrimo(i))
-                    {
-                        Console.WriteLine(i);
-                    }
-                }
-            }
+                numero++;
+            } while (numerosPerfectos < 4);
             Console.ReadKey();
         }
-        static bool esPrimo(int numero)
+        // ES NUMERO PERFECTO
+        static bool esNumeroPerfecto(int numero)
         {
-            if (numero >= 2)
+            int suma = 0;
+            for (int i = 1; i<numero; i++)
             {
-                int contador = 2;
-                bool primo = true;
-                while ((primo) && (contador != numero))
-                {
-                    if (numero % contador == 0)
-                        primo = false;
-                    contador++;
-                }
-                return primo;
+                if (esDivisor(numero, i))
+                    suma += i;
             }
-            else
-            {
-                return false;
-            }
-
+            return (suma == numero);
+        }
+        // ES DIVISOR
+        static bool esDivisor(int numero, int divisor)
+        {
+            return (numero % divisor == 0);
         }
     }
 }
