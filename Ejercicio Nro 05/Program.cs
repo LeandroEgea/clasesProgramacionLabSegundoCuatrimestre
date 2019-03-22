@@ -23,20 +23,13 @@ namespace Ejercicion_Nro_01
                 else
                     error = false;
             } while (error);
-            Console.WriteLine("Centros Numericos");
-            if (numero < 2)
+            Console.WriteLine("Centros Numericos:");
+            for (int i = 1; i <= numero; i++)
             {
-                Console.WriteLine("No hay numeros primos.");
-            }
-            else
-            {
-                Console.WriteLine("Numeros Primos:");
-                for (int i = 2; i <= numero; i++)
+                if (esCentroNumerico(i))
                 {
-                    if (esPrimo(i))
-                    {
-                        Console.WriteLine(i);
-                    }
+
+                    Console.WriteLine(i);
                 }
             }
             Console.ReadKey();
@@ -44,7 +37,34 @@ namespace Ejercicion_Nro_01
         // ES CENTRO NUMERICO
         static bool esCentroNumerico(int numero)
         {
-            return true;
+            int sumaMenores = sumaNumerosMenores(numero);
+            return sumaNumerosMayoresQueEsIgualA(numero, sumaMenores);
+        }
+        // SUMA MENORES
+        static int sumaNumerosMenores(int numero)
+        {
+            int suma = 0;
+            for (int i = 1; i < numero; i++)
+            {
+                suma += i;
+            }
+            return suma;
+        }
+        // SUMA MAYORES
+        static bool sumaNumerosMayoresQueEsIgualA(int numero, int numeroAIgualar)
+        {
+            int suma = 0;
+            int mayor = numero + 1;
+            do
+            {
+                suma += mayor;
+                if (suma == numeroAIgualar)
+                {
+                    return true;
+                }
+                mayor++;
+            }while (suma < numeroAIgualar) ;
+            return false;
         }
     }
 }
