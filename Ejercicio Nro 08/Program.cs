@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicion_Nro_01
+namespace Ejercicio_Nro_08
 {
     class Program
     {
@@ -30,90 +30,65 @@ namespace Ejercicion_Nro_01
         static string pedirString(String mensaje, String mensajeError)
         {
             string input;
-            bool error;
             Console.WriteLine(mensaje);
-            do
+            while (true)
             {
                 input = Console.ReadLine();
-                if (input.Length == 0)
-                {
-                    Console.WriteLine(mensajeError);
-                    error = true;
-                }
+                if (input.Length > 0)
+                    return input;
                 else
-                    error = false;
-            } while (error);
-            return input;
+                    Console.WriteLine(mensajeError);
+            }
         }
         // PEDIR DOUBLE
         static double pedirDoublePositivo(String mensaje, String mensajeError)
         {
             double numero;
-            bool error;
             Console.WriteLine(mensaje);
-            do
+            while (true)
             {
                 if (!double.TryParse(Console.ReadLine(), out numero) || numero <= 0)
-                {
                     Console.WriteLine(mensajeError);
-                    error = true;
-                }
                 else
-                    error = false;
-            } while (error);
-            return numero;
+                    return numero;
+            }
         }
         // PEDIR INT
         static int pedirIntPositivo(String mensaje, String mensajeError)
         {
             int numero;
-            bool error;
             Console.WriteLine(mensaje);
-            do
+            while (true)
             {
                 if (!int.TryParse(Console.ReadLine(), out numero) || numero <= 0)
-                {
                     Console.WriteLine(mensajeError);
-                    error = true;
-                }
                 else
-                    error = false;
-            } while (error);
-            return numero;
+                    return numero;
+            }
         }
         static int pedirIntPositivoOCero(String mensaje, String mensajeError)
         {
             int numero;
-            bool error;
             Console.WriteLine(mensaje);
-            do
+            while (true)
             {
                 if (!int.TryParse(Console.ReadLine(), out numero) || numero < 0)
-                {
                     Console.WriteLine(mensajeError);
-                    error = true;
-                }
                 else
-                    error = false;
-            } while (error);
-            return numero;
+                    return numero;
+            } 
         }
         static int pedirIntEnIntervalo(int desde, int hasta, String mensaje, String mensajeError)
         {
             int numero;
-            bool error;
             Console.WriteLine(mensaje);
-            do
+            while (true)
             {
                 if (!int.TryParse(Console.ReadLine(), out numero) || numero < desde || numero > hasta)
-                {
                     Console.WriteLine(mensajeError);
-                    error = true;
-                }
                 else
-                    error = false;
-            } while (error);
-            return numero;
+                    return numero;
+            }
         }
 
     }

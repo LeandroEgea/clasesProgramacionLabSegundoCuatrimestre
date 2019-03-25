@@ -1,0 +1,7 @@
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 12\bin\Debug\Ejercicio Nro 12.exe.config
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 12\bin\Debug\Ejercicio Nro 12.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 12\bin\Debug\Ejercicio Nro 12.pdb
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 12\obj\Debug\Ejercicio Nro 12.csprojAssemblyReference.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 12\obj\Debug\Ejercicio Nro 12.csproj.CoreCompileInputs.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 12\obj\Debug\Ejercicio Nro 12.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 12\obj\Debug\Ejercicio Nro 12.pdb
