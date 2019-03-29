@@ -1,0 +1,13 @@
+1.-El new solo se encarga de adquirir memoria, mientras que el constructor
+inicializa la memoria y la convierte en un objeto utilizable por el 
+programa.
+
+2.-
+-Publicos
+-No recibe argumentos
+-Inicializa todos los campos en 0, false, null, "".
+
+3.-Se crea automaticamente un constructor por defecto.
+
+4.-Los estaticos porque inicializan clases, mientras q los de 
+instancia inicializan objetos.
