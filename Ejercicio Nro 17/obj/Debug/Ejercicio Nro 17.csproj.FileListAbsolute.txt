@@ -1,0 +1,7 @@
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 17\bin\Debug\Ejercicio Nro 17.exe.config
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 17\bin\Debug\Ejercicio Nro 17.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 17\bin\Debug\Ejercicio Nro 17.pdb
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 17\obj\Debug\Ejercicio Nro 17.csprojAssemblyReference.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 17\obj\Debug\Ejercicio Nro 17.csproj.CoreCompileInputs.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 17\obj\Debug\Ejercicio Nro 17.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 17\obj\Debug\Ejercicio Nro 17.pdb

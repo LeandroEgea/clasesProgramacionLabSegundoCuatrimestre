@@ -17,6 +17,14 @@ namespace Ejercicio_Nro_19
             b.Sumar(2, 3);
             b.Sumar("a", "b");
             //TODO falta testear el resto
+
+            int c = (int) a;
+
+            bool d = a | b;
+            b.Sumar(2, 3);
+            bool e = a | b;
+            long f = a + b;
+            long g = f;
         }
     }
 }

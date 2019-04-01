@@ -36,6 +36,11 @@ namespace Ejercicio_Nro_19
             return s.cantidadSumas;
         }
 
+        public static long operator +(Sumador s1, Sumador s2)
+        {
+            return s1.cantidadSumas + s2.cantidadSumas;
+        }
+
         public static bool operator |(Sumador s1, Sumador s2)
         {
             return s1.cantidadSumas == s2.cantidadSumas;
