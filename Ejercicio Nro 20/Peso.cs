@@ -18,7 +18,7 @@ namespace Divisa
 
         public Peso(double cantidad)
         {
-            this.cantidad = cantidad;
+            this.cantidad = Math.Round(cantidad, 2);
         }
 
         public Peso(double cantidad, float cotizacion)
@@ -44,7 +44,7 @@ namespace Divisa
 
         public static explicit operator Euro(Peso p)
         {
-            return new Euro((p.GetCantidad() * Peso.GetCotizacion()) / Euro.GetCotizacion());
+            return new Euro(p.GetCantidad() * Peso.GetCotizacion() / Euro.GetCotizacion());
         }
 
         public static Peso operator +(Peso p1, Peso p2)
@@ -54,12 +54,12 @@ namespace Divisa
 
         public static Peso operator +(Peso p, Dolar d)
         {
-            return new Peso(p.GetCantidad() + d.GetCantidad() / Peso.GetCotizacion());
+            return p + (Peso)d;
         }
 
         public static Peso operator +(Peso p, Euro e)
         {
-            return new Peso(p.GetCantidad() + e.GetCantidad() * Euro.GetCotizacion() / Peso.GetCotizacion());
+            return p + (Peso)e;
         }
 
         public static Peso operator -(Peso p1, Peso p2)
@@ -75,6 +75,36 @@ namespace Divisa
         public static Peso operator -(Peso p, Euro e)
         {
             return p + new Euro(-e.GetCantidad());
+        }
+
+        public static bool operator ==(Peso p1, Peso p2)
+        {
+            return p1.GetCantidad() == p2.GetCantidad();
+        }
+
+        public static bool operator ==(Peso p, Dolar d)
+        {
+            return p == (Peso)d;
+        }
+
+        public static bool operator ==(Peso p, Euro e)
+        {
+            return p == (Peso)e;
+        }
+
+        public static bool operator !=(Peso p1, Peso p2)
+        {
+            return !(p1 == p2);
+        }
+
+        public static bool operator !=(Peso p, Dolar d)
+        {
+            return !(p == d);
+        }
+
+        public static bool operator !=(Peso p, Euro e)
+        {
+            return !(p == e);
         }
     }
 }
