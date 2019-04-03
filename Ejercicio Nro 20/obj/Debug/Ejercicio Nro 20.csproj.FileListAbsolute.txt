@@ -5,3 +5,10 @@ C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\obj\Debug\Ejerc
 C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\obj\Debug\Ejercicio Nro 20.csproj.CoreCompileInputs.cache
 C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\obj\Debug\Ejercicio Nro 20.exe
 C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\obj\Debug\Ejercicio Nro 20.pdb
+D:\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\bin\Debug\Ejercicio Nro 20.exe.config
+D:\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\bin\Debug\Ejercicio Nro 20.exe
+D:\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\bin\Debug\Ejercicio Nro 20.pdb
+D:\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\obj\Debug\Ejercicio Nro 20.csprojAssemblyReference.cache
+D:\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\obj\Debug\Ejercicio Nro 20.csproj.CoreCompileInputs.cache
+D:\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\obj\Debug\Ejercicio Nro 20.exe
+D:\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 20\obj\Debug\Ejercicio Nro 20.pdb

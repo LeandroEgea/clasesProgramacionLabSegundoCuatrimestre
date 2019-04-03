@@ -1,0 +1,6 @@
+D:\clasesProgramacionLabSegundoCuatrimestre\Repaso Nro 01\bin\Debug\Repaso Nro 01.exe.config
+D:\clasesProgramacionLabSegundoCuatrimestre\Repaso Nro 01\bin\Debug\Repaso Nro 01.exe
+D:\clasesProgramacionLabSegundoCuatrimestre\Repaso Nro 01\bin\Debug\Repaso Nro 01.pdb
+D:\clasesProgramacionLabSegundoCuatrimestre\Repaso Nro 01\obj\Debug\Repaso Nro 01.csproj.CoreCompileInputs.cache
+D:\clasesProgramacionLabSegundoCuatrimestre\Repaso Nro 01\obj\Debug\Repaso Nro 01.exe
+D:\clasesProgramacionLabSegundoCuatrimestre\Repaso Nro 01\obj\Debug\Repaso Nro 01.pdb
