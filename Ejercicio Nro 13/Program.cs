@@ -10,7 +10,7 @@ namespace Ejercicio_Nro_13
     {
         static void Main(string[] args)
         {
-            string bin = "10010101110011101,100";
+            string bin = "10000010101";
             double decim = Conversor.BinarioDecimal(bin);
             Console.WriteLine("{0}(2) = {1}(10)", bin, decim);
             decim = 1045;

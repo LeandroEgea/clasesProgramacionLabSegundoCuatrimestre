@@ -1,0 +1,21 @@
+METODOS
+1.-compilacion
+2.-si
+3.-no
+4.-no
+5.-parametros opcionales
+6.-tipo de dato, orden y/o cantidad
+7.-llamando al mas complejo desde los mas simples
+8.-no
+9.-
+10.-
+
+CONSTRUCTORES
+11.-no(se llama solo y no recibe argumentos)
+12.-no
+13.-no
+14.-si
+15.-llamar a metodos.
+16.-	Pasar edad como string
+	cambiar el orden
+	agregar DNI

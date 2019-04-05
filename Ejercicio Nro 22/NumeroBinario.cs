@@ -16,56 +16,24 @@ namespace Ejercicio_Nro_22
             this.numero = numero;
         }
 
-        public static string DecimalBinario(double decim)
+        public static implicit operator NumeroBinario(string numero)
         {
-            int i;
-            int num = Int32.Parse(decim.ToString());
-            string bin = "";
-            for (i = 0; num > 0; i++)
-            {
-                bin += (num % 2).ToString();
-                num = num / 2;
-            }
-            char[] charArray = bin.ToCharArray();
-            Array.Reverse(charArray);
-            return new string(charArray);
+            return new NumeroBinario(numero);
         }
-        public static double BinarioDecimal(string bin)
+
+        public static explicit operator string(NumeroBinario numeroBinario)
         {
-            double decim = 0;
-            if (!bin.Contains(","))
-            {
-                decim += BinarioEntero(bin);
-            }
-            else
-            {
-                string[] bins = bin.Split(',');
-                decim += BinarioEntero(bins[0]);
-                string decimales = "0," + BinarioEntero(bins[1]).ToString();
-                decim += double.Parse(decimales);
-            }
-            return decim;
+            return numeroBinario.numero;
         }
-        public static int BinarioEntero(string bin)
+
+        public static NumeroBinario operator +(NumeroBinario numeroBinario, NumeroDecimal numeroDecimal)
         {
-            char[] array = bin.ToCharArray();
-            Array.Reverse(array);
-            int suma = 0;
-                for (int i = 0; i < array.Length; i++)
-                {
-                    if (array[i] == '1')
-                    {
-                        if (i == 0)
-                        {
-                            suma += 1;
-                        }
-                        else
-                        {
-                            suma += (int)Math.Pow(2, i);
-                        }
-                    }
-                }
-            return suma;
+            return new NumeroBinario((string)numeroBinario + Conversor.DecimalBinario(numeroDecimal));
         }
+
+        //public static NumeroBinario operator -(NumeroBinario numeroBinario, NumeroDecimal numeroDecimal)
+        //{
+        //   //TODO
+        //}
     }
 }

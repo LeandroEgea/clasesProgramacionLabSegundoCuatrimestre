@@ -9,56 +9,40 @@ namespace Ejercicio_Nro_22
 {
     class Conversor
     {
-        public static string DecimalBinario(double decim)
+        public static NumeroBinario DecimalBinario(NumeroDecimal numeroDecimal)
         {
             int i;
-            int num = Int32.Parse(decim.ToString());
-            string bin = "";
-            for (i = 0; num > 0; i++)
+            int numero = (int)(double)numeroDecimal;
+            string binario = "";
+            for (i = 0; numero > 0; i++)
             {
-                bin += (num % 2).ToString();
-                num = num / 2;
+                binario += (numero % 2).ToString();
+                numero = numero / 2;
             }
-            char[] charArray = bin.ToCharArray();
-            Array.Reverse(charArray);
-            return new string(charArray);
+            char[] arrayBinario = binario.ToCharArray();
+            Array.Reverse(arrayBinario);
+            return new string(arrayBinario);
         }
-        public static double BinarioDecimal(string bin)
+        public static NumeroDecimal BinarioDecimal(NumeroBinario binario)
         {
-            double decim = 0;
-            if (!bin.Contains(","))
+            char[] arrayBinario = ((string)binario).ToCharArray();
+            Array.Reverse(arrayBinario);
+            int numero = 0;
+            for (int i = 0; i < arrayBinario.Length; i++)
             {
-                decim += BinarioEntero(bin);
-            }
-            else
-            {
-                string[] bins = bin.Split(',');
-                decim += BinarioEntero(bins[0]);
-                string decimales = "0," + BinarioEntero(bins[1]).ToString();
-                decim += double.Parse(decimales);
-            }
-            return decim;
-        }
-        public static int BinarioEntero(string bin)
-        {
-            char[] array = bin.ToCharArray();
-            Array.Reverse(array);
-            int suma = 0;
-                for (int i = 0; i < array.Length; i++)
+                if (arrayBinario[i] == '1')
                 {
-                    if (array[i] == '1')
+                    if (i == 0)
                     {
-                        if (i == 0)
-                        {
-                            suma += 1;
-                        }
-                        else
-                        {
-                            suma += (int)Math.Pow(2, i);
-                        }
+                        numero += 1;
+                    }
+                    else
+                    {
+                        numero += (int)Math.Pow(2, i);
                     }
                 }
-            return suma;
+            }
+            return numero;
         }
     }
 }
