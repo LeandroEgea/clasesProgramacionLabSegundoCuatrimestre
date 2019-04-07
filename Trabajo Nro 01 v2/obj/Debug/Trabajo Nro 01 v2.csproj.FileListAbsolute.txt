@@ -1,0 +1,10 @@
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\bin\Debug\Trabajo Nro 01 v2.exe.config
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\bin\Debug\Trabajo Nro 01 v2.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\bin\Debug\Trabajo Nro 01 v2.pdb
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\obj\Debug\Trabajo Nro 01 v2.csprojAssemblyReference.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\obj\Debug\Trabajo_Nro_01_v2.FormCalculadora.resources
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\obj\Debug\Trabajo_Nro_01_v2.Properties.Resources.resources
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\obj\Debug\Trabajo Nro 01 v2.csproj.GenerateResource.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\obj\Debug\Trabajo Nro 01 v2.csproj.CoreCompileInputs.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\obj\Debug\Trabajo Nro 01 v2.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Trabajo Nro 01 v2\obj\Debug\Trabajo Nro 01 v2.pdb

@@ -25,5 +25,25 @@ namespace Ejercicio_Nro_22
         {
             return numeroDecimal.numero;
         }
+
+        public static NumeroDecimal operator +(NumeroDecimal numeroDecimal, NumeroBinario numeroBinario)
+        {
+            return new NumeroDecimal((double)numeroDecimal + (double)Conversor.BinarioDecimal(numeroBinario));
+        }
+
+        public static NumeroDecimal operator -(NumeroDecimal numeroDecimal, NumeroBinario numeroBinario)
+        {
+            return 0; //TODO
+        }
+
+        public static bool operator ==(NumeroDecimal numeroDecimal, NumeroBinario numeroBinario)
+        {
+            return numeroDecimal.numero == Conversor.BinarioDecimal(numeroBinario).numero;
+        }
+
+        public static bool operator !=(NumeroDecimal numeroDecimal, NumeroBinario numeroBinario)
+        {
+            return !(numeroDecimal == numeroBinario);
+        }
     }
 }

@@ -28,12 +28,23 @@ namespace Ejercicio_Nro_22
 
         public static NumeroBinario operator +(NumeroBinario numeroBinario, NumeroDecimal numeroDecimal)
         {
-            return new NumeroBinario((string)numeroBinario + Conversor.DecimalBinario(numeroDecimal));
+            //return new NumeroBinario((string)numeroBinario + Conversor.DecimalBinario(numeroDecimal));
+            return "";//TODO
         }
 
-        //public static NumeroBinario operator -(NumeroBinario numeroBinario, NumeroDecimal numeroDecimal)
-        //{
-        //   //TODO
-        //}
+        public static NumeroBinario operator -(NumeroBinario numeroBinario, NumeroDecimal numeroDecimal)
+        {
+            return "";//TODO
+        }
+
+        public static bool operator ==(NumeroBinario numeroBinario, NumeroDecimal numeroDecimal)
+        {
+            return numeroBinario.numero == Conversor.DecimalBinario(numeroDecimal).numero;
+        }
+
+        public static bool operator !=(NumeroBinario numeroBinario, NumeroDecimal numeroDecimal)
+        {
+            return !(numeroBinario == numeroDecimal);
+        }
     }
 }

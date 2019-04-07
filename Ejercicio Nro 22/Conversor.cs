@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Nro_22
 {
+    //TODO Meter Negativos
     class Conversor
     {
         public static NumeroBinario DecimalBinario(NumeroDecimal numeroDecimal)

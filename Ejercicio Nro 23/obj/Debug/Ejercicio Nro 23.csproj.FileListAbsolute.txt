@@ -1,0 +1,10 @@
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\bin\Debug\Ejercicio Nro 23.exe.config
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\bin\Debug\Ejercicio Nro 23.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\bin\Debug\Ejercicio Nro 23.pdb
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\obj\Debug\Ejercicio Nro 23.csprojAssemblyReference.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\obj\Debug\Ejercicio_Nro_23.ConversorDisvisasVista.resources
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\obj\Debug\Ejercicio_Nro_23.Properties.Resources.resources
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\obj\Debug\Ejercicio Nro 23.csproj.GenerateResource.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\obj\Debug\Ejercicio Nro 23.csproj.CoreCompileInputs.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\obj\Debug\Ejercicio Nro 23.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 23\obj\Debug\Ejercicio Nro 23.pdb

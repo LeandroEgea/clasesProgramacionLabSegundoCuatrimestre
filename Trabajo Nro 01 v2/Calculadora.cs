@@ -10,10 +10,11 @@ namespace Trabajo_Nro_01
     {
         public static double Operar(Numero num1, Numero num2, string operador)
         {
-            if(operador.Equals("/") && num2 == 0)
-            {
+            //if(operador.Equals("/") && num2 == 0)
+            //{
 
-            }
+            //}
+            return 0; //TODO
         }
 
         private static string ValidarOperador(string operador)
