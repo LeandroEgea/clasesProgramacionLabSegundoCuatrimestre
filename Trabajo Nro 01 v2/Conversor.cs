@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio_Nro_22
+namespace Trabajo_Nro_01
 {
     class Conversor
     {

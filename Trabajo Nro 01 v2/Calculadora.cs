@@ -10,11 +10,23 @@ namespace Trabajo_Nro_01
     {
         public static double Operar(Numero num1, Numero num2, string operador)
         {
-            //if(operador.Equals("/") && num2 == 0)
-            //{
-
-            //}
-            return 0; //TODO
+            //TODO dividir entre 0
+            if (operador.Equals("/") && num2.Equals(null))//TODO
+            {
+                return double.MinValue;
+            }
+            switch(operador) 
+            {
+                case "+":
+                    return num1 + num2;
+                case "-":
+                    return num1 - num2;
+                case "*":
+                    return num1 * num2;
+                case "/":
+                    return num1 / num2;
+            }
+            return 0;
         }
 
         private static string ValidarOperador(string operador)

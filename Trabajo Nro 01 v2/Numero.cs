@@ -45,17 +45,26 @@ namespace Trabajo_Nro_01
 
         public string BinarioDecimal(string binario)
         {
-            return "";//TODO
+            //TODO validar
+            NumeroBinario numeroBinario = binario;
+            double asdf = (double)Conversor.BinarioDecimal(binario);
         }
 
         public string DecimalBinario(double numero)
         {
-            return "";//TODO
+            NumeroDecimal numeroDecimal = (TomarEnteroPositivo(numero));
+            return (string)Conversor.DecimalBinario(numeroDecimal);
         }
 
         public string DecimalBinario(string numero)
         {
-            return "";//TODO
+            double doubleNumero = ValidarNumero(numero);//TODO
+            return DecimalBinario(doubleNumero);
+        }
+
+        private double TomarEnteroPositivo(double numero)
+        {
+            return Math.Abs(Math.Floor(numero));
         }
 
         public static double operator +(Numero n1, Numero n2)
@@ -75,7 +84,7 @@ namespace Trabajo_Nro_01
 
         public static double operator /(Numero n1, Numero n2)
         {
-            return n1.numero / n2.numero;//TODO dividir entre 0
+            return n1.numero / n2.numero;
         }
     }
 }

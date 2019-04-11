@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calculadora.cs" />
+    <Compile Include="Conversor.cs" />
     <Compile Include="FormCalculadora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +54,8 @@
       <DependentUpon>FormCalculadora.cs</DependentUpon>
     </Compile>
     <Compile Include="Numero.cs" />
+    <Compile Include="NumeroBinario.cs" />
+    <Compile Include="NumeroDecimal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCalculadora.resx">

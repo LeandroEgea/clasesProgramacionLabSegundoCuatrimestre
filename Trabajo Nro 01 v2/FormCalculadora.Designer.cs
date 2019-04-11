@@ -34,6 +34,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "FormCalculadora";
+            this.Text = "s";
             this.ResumeLayout(false);
 
         }
