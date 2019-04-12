@@ -1,0 +1,15 @@
+1.-Si
+2.-Form
+3.-Una clase dividida en varios archivos
+4.-Si, si, si
+5.-En el dialog no podes interactuar con el padre.
+6.-	Como el VS, tiene varias ventanas adentro de esa.
+	ismdicontainer
+	mdiparent
+7.-	new(instancia el formulario)
+	load(todavia no es visible)
+	paint
+	activated(recibe foco el formulario)
+	closing
+	closed(ya no es visible)
+	disposed(se libera la memoria)

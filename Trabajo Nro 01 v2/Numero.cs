@@ -46,8 +46,9 @@ namespace Trabajo_Nro_01
         public string BinarioDecimal(string binario)
         {
             //TODO validar
-            NumeroBinario numeroBinario = binario;
-            double asdf = (double)Conversor.BinarioDecimal(binario);
+            //NumeroBinario numeroBinario = binario;
+            //double asdf = (double)Conversor.BinarioDecimal(binario);
+            return "";
         }
 
         public string DecimalBinario(double numero)

@@ -1,0 +1,8 @@
+1.-	unario trabaja con un solo operando(++ o !)
+	binario(== o >)
+2.-la cantidad de parametros de entrada
+3.-implicit o explicit
+4.-cuando se pueden perder datos el dev debe escribir (cast)
+5.-	casting -> no hay cambio ni converdsion en el valor
+	convert -> tiene logica para q un tipo se convierta en otro(implicit o explicit)
+	parsing -> interpretar un string para convertir en algo mas

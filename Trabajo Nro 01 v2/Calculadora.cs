@@ -15,6 +15,7 @@ namespace Trabajo_Nro_01
             {
                 return double.MinValue;
             }
+            operador = ValidarOperador(operador);
             switch(operador) 
             {
                 case "+":
