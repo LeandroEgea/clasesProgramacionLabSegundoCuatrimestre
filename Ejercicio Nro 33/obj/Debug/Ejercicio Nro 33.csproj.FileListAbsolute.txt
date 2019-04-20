@@ -1,0 +1,7 @@
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 33\bin\Debug\Ejercicio Nro 33.exe.config
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 33\bin\Debug\Ejercicio Nro 33.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 33\bin\Debug\Ejercicio Nro 33.pdb
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 33\obj\Debug\Ejercicio Nro 33.csprojAssemblyReference.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 33\obj\Debug\Ejercicio Nro 33.csproj.CoreCompileInputs.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 33\obj\Debug\Ejercicio Nro 33.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 33\obj\Debug\Ejercicio Nro 33.pdb

@@ -26,7 +26,6 @@ namespace Ejercicio_Nro_28
         {
             Dictionary<string, int> diccionario = new Dictionary<string, int>();
             string[] palabras = texto.Split(' ');
-            string retorno = ""; 
             foreach(string palabra in palabras)
             {
                 if(!diccionario.ContainsKey(palabra))
@@ -34,20 +33,25 @@ namespace Ejercicio_Nro_28
                 else
                     diccionario[palabra]++;
             }
-            //diccionario.
 
+            List<KeyValuePair<string, int>> lista = diccionario.ToList();
+            lista.Sort(Comparar);
 
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < 3; i++)
+            {
+                sb.Append("\n"+ lista[i].ToString());
+            }
+            return sb.ToString();
+        }
 
-
-            //KeyValuePair<string, int> first = d;
-            ////diccionario.Remove(first.Key);
-            //KeyValuePair<string, int> second = diccionario.Max();
-            //diccionario.Remove(second.Key);
-            //KeyValuePair<string, int> third = diccionario.Max();
-            ////retorno += (first.Key + " ");
-            //retorno += (second.Key + " ");
-            //retorno += (third.Key + " ");
-            return retorno;
+        static int Comparar(KeyValuePair<string, int> primerElemento, KeyValuePair<string, int> segundoElemento)
+        {
+            if (primerElemento.Value > segundoElemento.Value)
+                return -1;
+            else if (primerElemento.Value < segundoElemento.Value)
+                return 1;
+            return 0;
         }
     }
 }

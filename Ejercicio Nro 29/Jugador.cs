@@ -16,17 +16,44 @@ namespace Ejercicio_Nro_29
 
         private Jugador()
         {
-
+            this.totalGoles = 0;
+            this.partidosJugados = 0;
         }
-        Jugador(int dni, string nombre)
+        public Jugador(int dni, string nombre):this()
         {
-
+            this.dni = dni;
+            this.nombre = nombre;
         }
-        Jugador(int dni, string nombre, int totalGoles, int totalPartidos)
+        public Jugador(int dni, string nombre, int totalGoles, int totalPartidos):this(dni, nombre)
         {
-
+            this.totalGoles = totalGoles;
+            this.partidosJugados = totalPartidos;
         }
-
-        
+        public float GetPromedioGoles()
+        {
+            this.promedioGoles = (float)this.totalGoles / (float)this.partidosJugados;
+            return this.promedioGoles;
+        }
+        public string MostrarDatos()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("DNI: ");
+            sb.Append(this.dni);
+            sb.Append(" - Nombre: ");
+            sb.Append(this.nombre);
+            sb.Append(" - Goles: ");
+            sb.Append(this.totalGoles);
+            sb.Append(" - Promedio de Goles: ");
+            sb.Append(this.GetPromedioGoles());
+            return sb.ToString();
+        }
+        public static bool operator ==(Jugador j1, Jugador j2)
+        {
+            return j1.dni == j2.dni;
+        }
+        public static bool operator !=(Jugador j1, Jugador j2)
+        {
+            return !(j1 == j2);
+        }
     }
 }
