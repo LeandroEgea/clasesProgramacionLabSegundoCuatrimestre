@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9FF878DF-E128-48FF-8266-3142EDEAB4E7}</ProjectGuid>
+    <ProjectGuid>{7FF90A33-2794-481C-BC8C-1C77A5358734}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_Nro_34</RootNamespace>
-    <AssemblyName>Ejercicio Nro 34</AssemblyName>
+    <RootNamespace>Ejercicio_Nro_37</RootNamespace>
+    <AssemblyName>Ejercicio Nro 37</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Automovil.cs" />
-    <Compile Include="VehiculoTerrestre.cs" />
-    <Compile Include="Colores.cs" />
-    <Compile Include="Moto.cs" />
-    <Compile Include="Camion.cs" />
+    <Compile Include="Centralita.cs" />
+    <Compile Include="Provincial.cs" />
+    <Compile Include="Local.cs" />
+    <Compile Include="Llamada.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

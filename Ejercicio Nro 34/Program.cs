@@ -10,6 +10,9 @@ namespace Ejercicio_Nro_34
     {
         static void Main(string[] args)
         {
+            Camion camion = new Camion(8, 2, Colores.Blanco, 6, 1000);
+            Console.WriteLine(camion.MostrarDatos());
+            Console.ReadKey();
         }
     }
 }
