@@ -10,7 +10,6 @@ namespace CentralitaHerencia
     {
         public enum Franja
         {
-            // TODO Aca me trabe
             Franja_1,
             Franja_2,
             Franja_3
@@ -38,10 +37,23 @@ namespace CentralitaHerencia
 
         private float CalcularCosto()
         {
-            return 0; //TODO
+            float costo = 0;
+            switch(this.franjaHoraria)
+            {
+                case Franja.Franja_1:
+                    costo = 0.99f;
+                    break;
+                case Franja.Franja_2:
+                    costo = 1.25f;
+                    break;
+                case Franja.Franja_3:
+                    costo = 0.66f;
+                    break;
+            }
+            return costo * this.duracion;
         }
 
-        public string Mostrar() // ???
+        public new string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.Mostrar());

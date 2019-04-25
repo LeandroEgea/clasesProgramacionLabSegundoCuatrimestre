@@ -8,6 +8,14 @@ namespace CentralitaHerencia
 {
     public class Llamada
     {
+
+        public enum TipoLlamada
+        {
+            Local,
+            Provincial,
+            Todas
+        }
+
         protected float duracion;
         protected string nroDestino;
         protected string nroOrigen;
@@ -54,11 +62,10 @@ namespace CentralitaHerencia
 
         public static int OrdenarPorDuracion(Llamada llamada1, Llamada llamada2)
         {
-            //Fijarse si hay q dar vuelta
             if (llamada1.Duracion > llamada2.Duracion)
-                return -1;
-            else if (llamada1.Duracion < llamada2.Duracion)
                 return 1;
+            else if (llamada1.Duracion < llamada2.Duracion)
+                return -1;
             return 0;
         }
     }

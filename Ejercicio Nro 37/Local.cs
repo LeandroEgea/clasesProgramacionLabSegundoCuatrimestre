@@ -33,7 +33,7 @@ namespace CentralitaHerencia
             return this.costo * this.duracion;
         }
 
-        public string Mostrar()// ???
+        public new string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.Mostrar());

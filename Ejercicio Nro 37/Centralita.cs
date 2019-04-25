@@ -15,7 +15,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                return 0; //TODO
+                return CalcularGanancia(Llamada.TipoLlamada.Local);
             }
         }
 
@@ -23,7 +23,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                return 0; //TODO
+                return CalcularGanancia(Llamada.TipoLlamada.Provincial);
             }
         }
 
@@ -31,7 +31,7 @@ namespace CentralitaHerencia
         {
             get
             {
-                return 0; //TODO
+                return CalcularGanancia(Llamada.TipoLlamada.Todas);
             }
         }
 
@@ -39,30 +39,56 @@ namespace CentralitaHerencia
         {
             get
             {
-                return new List<Llamada>(); //TODO
+                return this.listaDeLlamadas;
             }
         }
 
         public Centralita()
         {
-            //TODO
+            this.listaDeLlamadas = new List<Llamada>();
         }
 
-        public Centralita(string NombreEmpresa)
+        public Centralita(string nombreEmpresa) : this()
         {
-            //TODO
+            this.razonSocial = nombreEmpresa;
         }
 
-        //Calcular Ganancia TODO 
+        private float CalcularGanancia(Llamada.TipoLlamada tipo)
+        {
+            float total = 0;
+            foreach (Llamada llamada in this.listaDeLlamadas)
+            {
+                if(llamada is Local && (tipo.Equals(Llamada.TipoLlamada.Todas) || tipo.Equals(Llamada.TipoLlamada.Local)))
+                {
+                    Local local = (Local)llamada;
+                    total += local.CostoLlamada;
+                }
+                else if(llamada is Provincial && (tipo.Equals(Llamada.TipoLlamada.Todas) || tipo.Equals(Llamada.TipoLlamada.Provincial)))
+                {
+                    Provincial provincial = (Provincial)llamada;
+                    total += provincial.CostoLlamada;
+                }
+            }
+            return total;
+        }
 
         public string Mostrar()
         {
-            return ""; //TODO
+            StringBuilder sb = new StringBuilder();
+            sb.Append("Razon Social: " + this.razonSocial);
+            sb.Append(" - Local: " + this.GananciasPorLocal);
+            sb.Append(" - Provincial: " + this.GananciasPorProvincial);
+            sb.Append(" - Total: " + this.GananciasPorTotal);
+            foreach(Llamada llamada in listaDeLlamadas)
+            {
+                sb.Append(llamada.Mostrar());
+            }
+            return sb.ToString();
         }
 
         public void OrdenarLlamadas()
         {
-            //TODO
+            listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
         }
     }
 }
