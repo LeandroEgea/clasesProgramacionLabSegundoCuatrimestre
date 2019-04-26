@@ -1,0 +1,13 @@
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\bin\Debug\VistaForm.exe.config
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\bin\Debug\VistaForm.exe
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\bin\Debug\VistaForm.pdb
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\bin\Debug\Entidades.dll
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\bin\Debug\Entidades.pdb
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\obj\Debug\VistaForm.csprojAssemblyReference.cache
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\obj\Debug\VistaForm.FormDT.resources
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\obj\Debug\VistaForm.Properties.Resources.resources
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\obj\Debug\VistaForm.csproj.GenerateResource.cache
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\obj\Debug\VistaForm.csproj.CoreCompileInputs.cache
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\obj\Debug\VistaForm.csproj.CopyComplete
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\obj\Debug\VistaForm.exe
+D:\clasesProgramacionLabSegundoCuatrimestre\ExamenSimulacro\Egea.Leandro\VistaForm\obj\Debug\VistaForm.pdb
