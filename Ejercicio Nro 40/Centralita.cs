@@ -74,26 +74,60 @@ namespace CentralitaHerencia
 
         private void AgregarLlamada(Llamada nuevaLlamada)
         {
-            listaDeLlamadas.Add(nuevaLlamada)//ME QUEDE ACA (PUNTO K)
+            listaDeLlamadas.Add(nuevaLlamada);
         }
 
-        public string Mostrar()
+        private string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("Razon Social: " + this.razonSocial);
-            sb.Append(" - Local: " + this.GananciasPorLocal);
-            sb.Append(" - Provincial: " + this.GananciasPorProvincial);
-            sb.Append(" - Total: " + this.GananciasPorTotal);
-            foreach(Llamada llamada in listaDeLlamadas)
+            sb.AppendLine();
+            sb.Append("Local: " + this.GananciasPorLocal);
+            sb.AppendLine();
+            sb.Append("Provincial: " + this.GananciasPorProvincial);
+            sb.AppendLine();
+            sb.Append("Total: " + this.GananciasPorTotal);
+            sb.AppendLine();
+            foreach (Llamada llamada in listaDeLlamadas)
             {
+                sb.AppendLine();
                 sb.Append(llamada.ToString());
             }
             return sb.ToString();
         }
 
+        public override string ToString()
+        {
+            return Mostrar();
+        }
+
         public void OrdenarLlamadas()
         {
             listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
+        }
+
+        public static bool operator ==(Centralita c, Llamada llamada)
+        {
+            foreach (Llamada l in c.Llamadas)
+            {
+                if(l == llamada)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static bool operator !=(Centralita c, Llamada llamada)
+        {
+            return !(c == llamada);
+        }
+
+        public static Centralita operator +(Centralita c, Llamada nuevaLlamada)
+        {
+            if (c != nuevaLlamada)
+                c.AgregarLlamada(nuevaLlamada);
+            return c;
         }
     }
 }

@@ -49,7 +49,6 @@ namespace Ejercicio_Nro_31
 
         public static bool operator ==(Negocio n, Cliente c)
         {
-            //n.clientes.Contains(c); ???
             foreach(Cliente cliente in n.clientes)
             {
                 if (c == cliente)

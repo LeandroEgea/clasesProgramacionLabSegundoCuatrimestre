@@ -57,14 +57,17 @@ namespace CentralitaHerencia
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("Duracion: " + this.Duracion);
-            sb.Append(" - Origen: " + this.NroOrigen);
-            sb.Append(" - Destino: " + this.NroDestino);
+            sb.AppendLine();
+            sb.Append("Origen: " + this.NroOrigen);
+            sb.AppendLine();
+            sb.Append("Destino: " + this.NroDestino);
+            sb.AppendLine();
             return sb.ToString();
         }
 
         public static bool operator ==(Llamada l1, Llamada l2)
         {
-            return true;//TODO
+            return l1.Equals(l2) && l1.NroOrigen == l2.NroOrigen && l1.NroDestino == l2.NroDestino;
         }
 
         public static bool operator !=(Llamada l1, Llamada l2)

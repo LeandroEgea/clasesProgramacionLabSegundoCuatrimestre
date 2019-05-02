@@ -10,7 +10,7 @@ namespace CentralitaHerencia
     {
         protected float costo;
 
-        public float CostoLlamada
+        public override float CostoLlamada
         {
             get
             {
@@ -37,7 +37,8 @@ namespace CentralitaHerencia
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.Mostrar());
-            sb.Append(" - Costo: " + this.CostoLlamada);
+            sb.Append("Costo: " + this.CostoLlamada);
+            sb.AppendLine();
             return sb.ToString();
         }
 

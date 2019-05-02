@@ -4,3 +4,10 @@ D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 02\bin\Debug\Ejercicio Nro 02.exe
 D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 02\bin\Debug\Ejercicio Nro 02.pdb
 D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 02\obj\Debug\Ejercicio Nro 02.exe
 D:\VisualStudio\ConceptosBasicos\Ejercicio Nro 02\obj\Debug\Ejercicio Nro 02.pdb
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 02\bin\Debug\Ejercicio Nro 02.exe.config
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 02\bin\Debug\Ejercicio Nro 02.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 02\bin\Debug\Ejercicio Nro 02.pdb
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 02\obj\Debug\Ejercicio Nro 02.csprojAssemblyReference.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 02\obj\Debug\Ejercicio Nro 02.csproj.CoreCompileInputs.cache
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 02\obj\Debug\Ejercicio Nro 02.exe
+C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 02\obj\Debug\Ejercicio Nro 02.pdb
