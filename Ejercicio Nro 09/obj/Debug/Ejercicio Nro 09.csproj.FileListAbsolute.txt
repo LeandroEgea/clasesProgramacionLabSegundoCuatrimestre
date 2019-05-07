@@ -1,6 +1,0 @@
-C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 09\bin\Debug\Ejercicio Nro 09.exe.config
-C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 09\bin\Debug\Ejercicio Nro 09.exe
-C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 09\bin\Debug\Ejercicio Nro 09.pdb
-C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 09\obj\Debug\Ejercicio Nro 09.csproj.CoreCompileInputs.cache
-C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 09\obj\Debug\Ejercicio Nro 09.exe
-C:\src\clasesProgramacionLabSegundoCuatrimestre\Ejercicio Nro 09\obj\Debug\Ejercicio Nro 09.pdb
