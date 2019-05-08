@@ -1,0 +1,15 @@
+1.1.- En las firmas el override lo lleva escrito.
+1.2.- El override va en la clase hija, el overload, misma clase
+1.3.- Override, ejecucion. Overload compilacion
+1.4.- IDK
+
+2.- Virtual.
+3.- Abstract
+4.- Si
+5.- No necesariamente
+6.- No
+7.- No necesariamente(Virtual)
+8.- 	S S S
+	S S N
+	S N S
+	N N N

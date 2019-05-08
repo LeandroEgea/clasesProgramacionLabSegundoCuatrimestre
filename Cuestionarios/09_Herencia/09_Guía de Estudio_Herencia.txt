@@ -1,0 +1,13 @@
+1.- Derivada o hija, Base o padre
+2.- Que si C hereda de B y B hereda de A. Entonces C hereda de A.
+3.- No
+4.- Si, pero no son accesibles en la derivada
+5.- Es heredar de mas de una clase. No
+6.- Nos permite organizar mejor las clases y el codigo.
+	Separando lo general de lo especifico.
+7.- No, la visibilidad no puede ser mayor.
+8.- Una clase que no puede ser heredada
+9.- Si
+10.- Para la derivada es publico, para no-derivada, es privado.
+11.- Llama al por defecto. Que si no declaro tambien (), tira error en tiempo de
+	compilacion.

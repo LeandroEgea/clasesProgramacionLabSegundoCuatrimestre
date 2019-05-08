@@ -1,0 +1,5 @@
+1.- 1, si se puede
+2.- 0, 1, 15, 16, 17, 2, 3
+3.- No
+4.- el this y los corchetes
+5.- Si

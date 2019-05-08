@@ -8,7 +8,8 @@ METODOS
 7.-llamando al mas complejo desde los mas simples
 8.-no
 9.-
-10.-
+10.- 	La sobrecarga se resuelve en tiempo de compilacion, el override en ejecucion
+	Override conlleva el concepto de polimorfismo, overload no
 
 CONSTRUCTORES
 11.-no(se llama solo y no recibe argumentos)

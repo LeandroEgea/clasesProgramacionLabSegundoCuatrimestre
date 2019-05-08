@@ -1,0 +1,15 @@
+1.- 	Abstraccion es el proceso de separar lo importante de lo que 
+	no lo es	
+2.-	Encapsulacion es el ocultamiento de los datos
+	de un objeto, para q solo se puedan editar mediante
+	metodos del mismo.
+	Ocultamiento de la informacion, protege los datos de un objeto
+	contra su modificacion, de quien no tenga derecho a acceder.
+3.-	Private, solo es visible dentro de la clase
+	Internal, solo es visible dentro del Proyecto
+	Internal Protected, combinacion
+	Protected, solo es visible en la clase y sus hijas
+	Public, visible por todos
+4.- Con la encapsulacion logramos mantener nuestros atributos
+	no accesibles para modificarlos. Para modificarlos
+	creamos prop y metodos que manejan estos atributos.

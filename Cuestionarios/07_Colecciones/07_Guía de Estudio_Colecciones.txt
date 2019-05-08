@@ -1,0 +1,17 @@
+1.-	Una coleccion generica cumple con la seguridad en los tipos
+	para q ningun otro tipo se pueda agregar
+	No generica, Cualquier objeto
+2.- 	Las matrices sirven para manejar un numero de datos fijos
+	fuertemente tipados.
+	Colecciones, mas flexibles, numero de objetos aumenta y reduce 
+	a medida q cambia la app.
+3.- 	Dictionary-> Almacena KeyValuePair
+	List-> Almacena objeto (indice) de un mismo tipo, tiene
+	metodos para ordenar, añadir, remover...
+	SortedList-> Como la anterior pero los objetos se ordenan 
+	por IComparer<T>.
+4.-	Queue(LIFO) devuelve el objeto q entro el primero
+	Stack(FIFO)
+5.- No
+6.- No
+7.- La 1.

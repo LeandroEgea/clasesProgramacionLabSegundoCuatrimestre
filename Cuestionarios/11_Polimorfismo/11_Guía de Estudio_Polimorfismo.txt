@@ -1,0 +1,12 @@
+1. Es la capacidad de tratar objetos diferentes de la misma forma(metodo)
+2. Con virtual en un metodo de la base y Override en las derivadas.
+3. Si, porq todos los objetos heredan de Object y Object tiene 
+	metodos virtual(ToString, Equals, etc).
+4. Si, Si, No, IDK
+5. 	R: per O: per
+	   per    prof
+	   prof   prof
+
+	Una persona puede enseñar
+	Un profesor puede enseñar en un colegio
+	Un profesor puede enseñar en un colegio

@@ -8,5 +8,5 @@
 8 no 
 9 no
 10 no
-11 Thread.sleep y String.format
-12 tostring y contains
+11 Thread.sleep y String.format Int32.TryParse
+12 tostring y contains Equals
