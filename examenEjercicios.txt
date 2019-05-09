@@ -1,0 +1,7 @@
+20(Euro Peso Dolar)
+22 y 23(Binario Decimal)
+28(Contador de palabras(Diccionario))
+33 Libro(indexador)
+29 32 35 Equipo
+36 Competencia
+37 y 40 Centralita
