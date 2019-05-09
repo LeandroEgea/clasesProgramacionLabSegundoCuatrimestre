@@ -4,11 +4,11 @@ METODOS
 3.-no
 4.-no
 5.-parametros opcionales
-6.-tipo de dato, orden y/o cantidad
-7.-llamando al mas complejo desde los mas simples
-8.-no
+6.-tipo de dato, orden y/o cantidad. out ref.
+7.-Llamando al mas complejo desde los mas simples.
+8.-No
 9.-
-10.- 	La sobrecarga se resuelve en tiempo de compilacion, el override en ejecucion
+10.- La sobrecarga se resuelve en tiempo de compilacion, el override en ejecucion
 	Override conlleva el concepto de polimorfismo, overload no
 
 CONSTRUCTORES

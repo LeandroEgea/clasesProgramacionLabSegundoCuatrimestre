@@ -10,6 +10,6 @@
 	load(todavia no es visible)
 	paint
 	activated(recibe foco el formulario)
-	closing
+	closing(podes cancelar el cerrado)
 	closed(ya no es visible)
 	disposed(se libera la memoria)
