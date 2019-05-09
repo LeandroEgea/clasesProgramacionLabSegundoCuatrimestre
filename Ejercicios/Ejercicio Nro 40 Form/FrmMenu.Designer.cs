@@ -43,6 +43,7 @@
             this.btnLlamada.TabIndex = 0;
             this.btnLlamada.Text = "Generar Llamada";
             this.btnLlamada.UseVisualStyleBackColor = true;
+            this.btnLlamada.Click += new System.EventHandler(this.btnLlamada_Click);
             // 
             // btnTotal
             // 
@@ -52,6 +53,7 @@
             this.btnTotal.TabIndex = 1;
             this.btnTotal.Text = "Total";
             this.btnTotal.UseVisualStyleBackColor = true;
+            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
             // 
             // btnLocal
             // 
@@ -61,6 +63,7 @@
             this.btnLocal.TabIndex = 2;
             this.btnLocal.Text = "Local";
             this.btnLocal.UseVisualStyleBackColor = true;
+            this.btnLocal.Click += new System.EventHandler(this.btnLocal_Click);
             // 
             // btnProvincial
             // 
@@ -70,6 +73,7 @@
             this.btnProvincial.TabIndex = 3;
             this.btnProvincial.Text = "Provincial";
             this.btnProvincial.UseVisualStyleBackColor = true;
+            this.btnProvincial.Click += new System.EventHandler(this.btnProvincial_Click);
             // 
             // btnSalir
             // 
@@ -79,6 +83,7 @@
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmMenu
             // 
