@@ -55,14 +55,14 @@ namespace Ejercicio_Nro_30
         {
             get
             {
-                //if (i < competidores.Count)
-                //{
+                if (i < competidores.Count)
+                {
                     return competidores[i];
-                //}
-                //else
-                //{
-                //    return new VehiculoDeCarrera(0, ""); //null;
-                //}
+                }
+                else
+                {
+                    return null; //new VehiculoDeCarrera(0, "");
+                }
             }
         }
 
@@ -102,7 +102,7 @@ namespace Ejercicio_Nro_30
         }
 
         public static bool operator ==(Competencia c, VehiculoDeCarrera v)
-        {//No duplicar codigo??
+        {
             if (v is AutoF1 && c.Tipo == TipoCompetencia.F1)
             {
                 foreach (AutoF1 a in c.competidores)
@@ -145,7 +145,7 @@ namespace Ejercicio_Nro_30
         }
 
         public static bool operator -(Competencia c, VehiculoDeCarrera v)
-        {//No duplicar codigo??
+        {
             if (v is AutoF1 && c.Tipo == TipoCompetencia.F1)
             {
                 foreach (AutoF1 a in c.competidores)
