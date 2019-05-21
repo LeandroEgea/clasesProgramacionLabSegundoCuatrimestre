@@ -66,6 +66,14 @@ namespace Ejercicio_Nro_30
             }
         }
 
+        public List<VehiculoDeCarrera> Competidores
+        {
+            get
+            {
+                return this.competidores;
+            }
+        }
+
         private Competencia()
         {
             this.competidores = new List<VehiculoDeCarrera>();
@@ -133,10 +141,18 @@ namespace Ejercicio_Nro_30
 
         public static bool operator +(Competencia c, VehiculoDeCarrera v)
         {
-            if (c == v || c.competidores.Count >= c.CantidadCompetidores ||
+            try
+            {
+                if (c == v || c.competidores.Count >= c.CantidadCompetidores ||
                 (c.Tipo != TipoCompetencia.F1 && v is AutoF1) ||
                 (c.Tipo != TipoCompetencia.MotoCross && v is MotoCross))
-                return false;
+                    throw new CompetenciaNoDisponibleExcepcion("El vehículo no corresponde a la competencia",
+                        typeof(Competencia).Name, " == ");
+            }
+            catch(CompetenciaNoDisponibleExcepcion e)
+            {
+                throw new CompetenciaNoDisponibleExcepcion("Competencia incorrecta", typeof(Competencia).Name, " + ", e);
+            }
             c.competidores.Add(v);
             v.EnCompetencia = true;
             v.VueltasRestantes = c.cantidadVueltas;

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{34618CDB-A20D-4D2F-A9CA-6BBB1DA44A02}</ProjectGuid>
+    <ProjectGuid>{A3B691A7-22FC-47C2-BCD9-32EBB51B3E32}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ejercicio_Nro_42</RootNamespace>
-    <AssemblyName>Ejercicio Nro 42</AssemblyName>
+    <RootNamespace>Ejercicio_Nro_42_Fede</RootNamespace>
+    <AssemblyName>Ejercicio Nro 42 Fede</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Division.cs" />
-    <Compile Include="Operacion.cs" />
+    <Compile Include="MiClaseErrores.cs" />
+    <Compile Include="MiException.cs" />
+    <Compile Include="MiOtraClase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnaExcepcion.cs" />
+    <Compile Include="UnaException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

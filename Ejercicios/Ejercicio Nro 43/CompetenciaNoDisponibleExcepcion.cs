@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Nro_30
 {
-    class CompetenciaNoDisponibleExcepcion : Exception
+    public class CompetenciaNoDisponibleExcepcion : Exception
     {
         private string nombreClase;
         private string nombreMetodo;
@@ -44,9 +44,15 @@ namespace Ejercicio_Nro_30
             sb.AppendFormat("Excepción en el método {0} de la clase {1}:", this.NombreMetodo, this.NombreClase);
             sb.AppendLine();
             sb.AppendLine(this.Message);
-            //TODO 
-            sb.Append(this.InnerException.Message);
-            //
+
+            Exception e = base.InnerException;
+            while (!object.ReferenceEquals(e, null))
+            {
+                sb.Append(e.Message);
+                sb.Append("\t");
+                e = e.InnerException;
+            }
+            sb.AppendLine();
             return sb.ToString();
         }
     }

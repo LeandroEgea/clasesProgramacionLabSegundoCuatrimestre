@@ -131,7 +131,7 @@ namespace CentralitaHerencia
             }     
             else
             {
-                throw new CentralitaException("La llamada no existe en el sistema", typeof(Centralita).Name, "+ operator");
+                throw new CentralitaException("La llamada ya existe en el sistema", typeof(Centralita).Name, "+ operator");
             }
             return c;
         }
