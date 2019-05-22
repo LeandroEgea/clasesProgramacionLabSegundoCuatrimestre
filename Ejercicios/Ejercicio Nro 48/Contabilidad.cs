@@ -13,6 +13,12 @@ namespace Ejercicio_Nro_48
         private List<T> egresos;
         private List<U> ingresos;
 
+        public Contabilidad()
+        {
+            egresos = new List<T>();
+            ingresos = new List<U>();
+        }
+
         public static Contabilidad<T, U> operator +(Contabilidad<T, U> c, T e)
         {
             c.egresos.Add(e);

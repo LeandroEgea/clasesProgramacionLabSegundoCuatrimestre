@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace Ejercicio_Nro_47
 {
@@ -21,10 +20,31 @@ namespace Ejercicio_Nro_47
         {
             get
             {
-                //Agarrar 2 equipos //TODO
-                //return CalcularPartido(e1, e2);
-                return null;
+                if(equipos.Count > 1)
+                {
+                    T e1;
+                    T e2;
+                    do
+                    {
+                        e1 = DarEquipo();
+                        e2 = DarEquipo();
+                    } while (e1 == e2);
+                    
+                    return CalcularPartido(e1, e2);
+                }
+                return "";
             }
+        }
+
+        private T DarEquipo()
+        {
+            if(equipos.Count > 0)
+            {
+                Thread.Sleep(500);
+                int rnd = new Random().Next(1, (equipos.Count + 1));
+                return equipos[rnd - 1];
+            }
+            return null;
         }
 
         public static bool operator ==(Torneo<T> t, T e)
@@ -63,7 +83,12 @@ namespace Ejercicio_Nro_47
 
         private string CalcularPartido(T e1, T e2)
         {
-            return null;//TODO
+            Thread.Sleep(500);
+            int r1 = new Random().Next(1, 130);
+            Thread.Sleep(500);
+            int r2 = new Random().Next(1, 130);
+
+            return String.Format("{0} {1} - {2} {3}", e1.Nombre, r1, r2, e2.Nombre);
         }
     }
 }

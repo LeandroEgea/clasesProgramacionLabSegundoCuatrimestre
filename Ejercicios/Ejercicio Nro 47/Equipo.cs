@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Nro_47
 {
-    public class Equipo
+    public abstract class Equipo
     {
         private string nombre;
         private DateTime fechaCreacion;
@@ -15,6 +15,14 @@ namespace Ejercicio_Nro_47
         {
             this.nombre = nombre;
             this.fechaCreacion = fechaCreacion;
+        }
+
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
         }
 
         public static bool operator ==(Equipo e1, Equipo e2)

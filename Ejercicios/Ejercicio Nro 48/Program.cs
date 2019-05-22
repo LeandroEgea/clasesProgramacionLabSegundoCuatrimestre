@@ -10,6 +10,13 @@ namespace Ejercicio_Nro_48
     {
         static void Main(string[] args)
         {
+            Contabilidad<Factura, Recibo> c = new Contabilidad<Factura, Recibo>();
+
+            c += new Recibo(2);
+            c += new Factura(3);
+            c += new Recibo();
+
+            Console.ReadKey();
         }
     }
 }

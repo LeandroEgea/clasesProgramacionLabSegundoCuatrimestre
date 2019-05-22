@@ -37,8 +37,7 @@ namespace Ejercicio_Nro_47_Console
             tBasquet += lakers2;
             tBasquet += spurs;
             Console.WriteLine(tBasquet.Mostrar());
-
-
+            
             //PARTIDOS
             Console.WriteLine(tFutbol.JugarPartido);
             Console.WriteLine(tFutbol.JugarPartido);
