@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Nro_50
 {
-    public interface IGuardar<T, V>
+    class Program
     {
-        bool Guardar(T obj);
-
-        V Leer();
+        static void Main(string[] args)
+        {
+        }
     }
 }

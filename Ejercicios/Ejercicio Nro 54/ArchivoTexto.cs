@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Nro_50
 {
-    public interface IGuardar<T, V>
+    public static class ArchivoTexto<T, V> : IGuardar<T, V>
     {
-        bool Guardar(T obj);
-
-        V Leer();
     }
 }
