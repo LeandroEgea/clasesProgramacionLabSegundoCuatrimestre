@@ -8,7 +8,7 @@ namespace CentralitaHerencia
 {
     interface IGuardar<T>
     {
-        //string RutaDeArchivo { get; set; }
+        string RutaDeArchivo { get; set; }
 
         bool Guardar();
 

@@ -34,7 +34,8 @@ namespace Test
             }
 
             c.OrdenarLlamadas();
-            Console.WriteLine(c.ToString());
+            Console.WriteLine(c.Leer());
+            //Console.WriteLine(c.ToString());
             Console.ReadKey();
         }
     }

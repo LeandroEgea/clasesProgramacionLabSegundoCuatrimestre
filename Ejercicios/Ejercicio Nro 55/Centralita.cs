@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,25 @@ namespace CentralitaHerencia
 {
     public class Centralita : IGuardar<string>
     {
+        //ESTO SE GUARDA EN Ejercicio55\CentralitaHerencia\bin\Debug
+        private const string PATH_TXT = "LogCentralita2.txt";
+
         private List<Llamada> listaDeLlamadas;
         protected string razonSocial;
+        private string rutaDeArchivo;
+
+        public string RutaDeArchivo
+        {
+            get
+            {
+                return rutaDeArchivo;
+            }
+            set
+            {
+                rutaDeArchivo = value;
+            }
+
+        }
 
         public float GananciasPorLocal
         {
@@ -46,6 +64,7 @@ namespace CentralitaHerencia
         public Centralita()
         {
             this.listaDeLlamadas = new List<Llamada>();
+            this.RutaDeArchivo = PATH_TXT;
         }
 
         public Centralita(string nombreEmpresa) : this()
@@ -55,14 +74,26 @@ namespace CentralitaHerencia
 
         public bool Guardar()
         {
-            float a = this.GananciasPorLocal;
-            ///
-            return true;
+            StreamWriter archivo = new StreamWriter(RutaDeArchivo, true);
+            if (File.Exists(RutaDeArchivo))
+            {
+                archivo.WriteLine(DateTime.Now.ToString("dddd dd MMMM yyyy H:mm") + " - Se realizo una llamada");
+                archivo.Close();
+                return true;
+            }
+            return false;
         }
 
         public string Leer()
         {
-            throw new NotImplementedException();
+            if (File.Exists(RutaDeArchivo))
+            {
+                StreamReader archivo = new StreamReader(RutaDeArchivo);
+                string texto = archivo.ReadToEnd();
+                archivo.Close();
+                return texto;
+            }
+            return "";
         }
 
         private float CalcularGanancia(Llamada.TipoLlamada tipo)
@@ -137,14 +168,17 @@ namespace CentralitaHerencia
 
         public static Centralita operator +(Centralita c, Llamada nuevaLlamada)
         {
-            if (c != nuevaLlamada)
+            if (c == nuevaLlamada)
+            {
+                throw new CentralitaException("La llamada ya existe en el sistema", typeof(Centralita).Name, "+ Operator");
+            }     
+            else 
             {
                 c.AgregarLlamada(nuevaLlamada);
-                Centralita.Guardar();
-            }     
-            else
-            {
-                throw new CentralitaException("La llamada ya existe en el sistema", typeof(Centralita).Name, "+ operator");
+                if(!c.Guardar())
+                {
+                    throw new CentralitaException("FallaLogException", typeof(Centralita).Name, "+ Operator");
+                }
             }
             return c;
         }
