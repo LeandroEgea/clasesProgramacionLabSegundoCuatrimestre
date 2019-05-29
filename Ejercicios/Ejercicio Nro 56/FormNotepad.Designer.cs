@@ -76,6 +76,7 @@
             this.GuardarMenuStripItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.GuardarMenuStripItem.Size = new System.Drawing.Size(231, 22);
             this.GuardarMenuStripItem.Text = "Guardar";
+            this.GuardarMenuStripItem.Click += new System.EventHandler(this.GuardarMenuStripItem_Click);
             // 
             // guardarComoMenuStripItem
             // 
