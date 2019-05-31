@@ -8,10 +8,10 @@ namespace Ejercicio_Nro_52
 {
     public class Lapiz : IAcciones
     {
-        //Falta lo de explicita
         private float tamanioMina;
+        private IAcciones iAcciones;
 
-        public ConsoleColor Color
+        ConsoleColor IAcciones.Color
         {
             get
             {
@@ -23,7 +23,7 @@ namespace Ejercicio_Nro_52
             }
         }
 
-        public float UnidadesDeEscritura
+        float IAcciones.UnidadesDeEscritura
         {
             get
             {
@@ -37,32 +37,36 @@ namespace Ejercicio_Nro_52
 
         public Lapiz(int unidades)
         {
-            UnidadesDeEscritura = unidades;
+            iAcciones = this;
+            iAcciones.UnidadesDeEscritura = unidades;
         }
 
-        public EscrituraWrapper Escribir(string texto) //EscrituraWrapper IAcciones.Escribir(string texto)
+        EscrituraWrapper IAcciones.Escribir(string texto)
         {
+            iAcciones = this;
             string textoEscrito = "";
             for (int i = 0; i < texto.Length; i++)
             {
-                if (UnidadesDeEscritura >= 0.1)
+                if (iAcciones.UnidadesDeEscritura >= 0.1)
                 {
-                    UnidadesDeEscritura = (float)(UnidadesDeEscritura - 0.1);
+                    iAcciones.UnidadesDeEscritura = (float)(iAcciones.UnidadesDeEscritura - 0.1);
                     textoEscrito += texto[i];
                 }
             }
-            return new EscrituraWrapper(textoEscrito, Color);
+            return new EscrituraWrapper(textoEscrito, iAcciones.Color);
         }
 
-        public bool Recargar(int unidades)
+        bool IAcciones.Recargar(int unidades)
         {
-            UnidadesDeEscritura = UnidadesDeEscritura + unidades;
+            iAcciones = this;
+            iAcciones.UnidadesDeEscritura = iAcciones.UnidadesDeEscritura + unidades;
             return true;
         }
 
         public override string ToString()
         {
-            return String.Format("Lapiz, Color: {0}, Nivel de tinta: {1}", Color, UnidadesDeEscritura);
+            iAcciones = this;
+            return String.Format("Lapiz, Color: {0}, Nivel de tinta: {1}", iAcciones.Color, iAcciones.UnidadesDeEscritura);
         }
     }
 }

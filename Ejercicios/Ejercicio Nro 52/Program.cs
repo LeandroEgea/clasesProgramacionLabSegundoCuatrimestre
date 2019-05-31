@@ -13,7 +13,8 @@ namespace Ejercicio_Nro_52
             ConsoleColor colorOriginal = Console.ForegroundColor;
             Lapiz miLapiz = new Lapiz(10);
             Boligrafo miBoligrafo = new Boligrafo(20, ConsoleColor.Green);
-            EscrituraWrapper eLapiz = miLapiz.Escribir("Hola"); //???
+            IAcciones iAcciones = miLapiz;
+            EscrituraWrapper eLapiz = iAcciones.Escribir("Hola");
             Console.ForegroundColor = eLapiz.color;
             Console.WriteLine(eLapiz.texto);
             Console.ForegroundColor = colorOriginal;
