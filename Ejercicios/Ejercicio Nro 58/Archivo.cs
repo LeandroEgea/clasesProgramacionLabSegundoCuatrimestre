@@ -11,7 +11,7 @@ namespace Ejercicio_Nro_58
     {
         protected virtual bool ValidarArchivo(string ruta, bool validaExistencia)
         {
-            if (validaExistencia && File.Exists(ruta))
+            if (validaExistencia && !File.Exists(ruta))
             {
                 throw new FileNotFoundException();
             }

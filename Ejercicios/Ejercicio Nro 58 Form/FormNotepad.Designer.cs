@@ -116,7 +116,8 @@
             // 
             this.openFileDialog.DefaultExt = "txt";
             this.openFileDialog.FileName = "openFileDialog";
-            this.openFileDialog.Filter = "txt files (*.txt)|*.txt";
+            this.openFileDialog.Filter = "Archivos de texto(.txt)|*.txt|Archivos de datos (.dat)|*.dat|Archivos XML(.xml)|*" +
+    ".xml";
             this.openFileDialog.InitialDirectory = "c:\\\\";
             this.openFileDialog.RestoreDirectory = true;
             this.openFileDialog.ShowReadOnly = true;
@@ -125,7 +126,8 @@
             // saveFileDialog
             // 
             this.saveFileDialog.DefaultExt = "txt";
-            this.saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            this.saveFileDialog.Filter = "Archivos de texto(.txt)|*.txt|Archivos de datos (.dat)|*.dat|Archivos XML(.xml)|*" +
+    ".xml";
             this.saveFileDialog.Title = "Guardar como";
             // 
             // FormNotepad

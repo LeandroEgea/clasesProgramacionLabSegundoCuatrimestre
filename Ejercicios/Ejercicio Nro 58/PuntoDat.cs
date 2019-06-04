@@ -24,6 +24,10 @@ namespace Ejercicio_Nro_58
                 contenido = value;
             }
         }
+        public PuntoDat()
+        {
+
+        }
 
         protected override bool ValidarArchivo(string ruta, bool validaExistencia)
         {
@@ -31,11 +35,13 @@ namespace Ejercicio_Nro_58
             {
                 if (base.ValidarArchivo(ruta, validaExistencia))
                 {
-                    throw new NotImplementedException();//TODO
-                    //throw new ArchivoIncorrectoException("El archivo no es .dat");
+                    if (Path.GetExtension(ruta) == ".dat")
+                        return true;
+                    else
+                        throw new ArchivoIncorrectoException("El archivo no es .dat");
                 }
             }
-            catch (NotImplementedException e)
+            catch (ArchivoIncorrectoException e)
             {
                 throw new ArchivoIncorrectoException("El archivo no es correcto", e);
             }
@@ -44,8 +50,15 @@ namespace Ejercicio_Nro_58
 
         public bool Guardar(string ruta, PuntoDat puntoDat)
         {
-            if (File.Exists(ruta))
-                return GuardarComo(ruta, puntoDat);
+            try
+            {
+                if (base.ValidarArchivo(ruta, true))
+                    return GuardarComo(ruta, puntoDat);
+            }
+            catch (ArchivoIncorrectoException)
+            {
+
+            }
             return false;
         }
 
@@ -60,16 +73,22 @@ namespace Ejercicio_Nro_58
 
         public PuntoDat Leer(string ruta)
         {
-            if (File.Exists(ruta))
+            try
             {
-                FileStream fs = new FileStream(ruta, FileMode.Open);
-                BinaryFormatter ser = new BinaryFormatter();
-                PuntoDat puntoDat = (PuntoDat)ser.Deserialize(fs);
-                fs.Close();
-                return puntoDat;
+                if (base.ValidarArchivo(ruta, true))
+                {
+                    FileStream fs = new FileStream(ruta, FileMode.Open);
+                    BinaryFormatter ser = new BinaryFormatter();
+                    PuntoDat puntoDat = (PuntoDat)ser.Deserialize(fs);
+                    fs.Close();
+                    return puntoDat;
+                }
+            }
+            catch (ArchivoIncorrectoException)
+            {
+
             }
             return null;
         }
-        //meter lo del filter
     }
 }

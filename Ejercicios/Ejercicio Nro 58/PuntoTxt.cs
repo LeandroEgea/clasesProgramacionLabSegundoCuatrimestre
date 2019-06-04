@@ -16,11 +16,13 @@ namespace Ejercicio_Nro_58
             {
                 if (base.ValidarArchivo(ruta, validaExistencia))
                 {
-                    throw new NotImplementedException();//TODO
-                    //throw new ArchivoIncorrectoException("El archivo no es .txt");
+                    if (Path.GetExtension(ruta) == ".txt")
+                        return true;
+                    else
+                        throw new ArchivoIncorrectoException("El archivo no es .txt");
                 }
             }
-            catch(NotImplementedException e)
+            catch (ArchivoIncorrectoException e)
             {
                 throw new ArchivoIncorrectoException("El archivo no es correcto", e);
             }
@@ -29,8 +31,15 @@ namespace Ejercicio_Nro_58
 
         public bool Guardar(string ruta, string texto)
         {
-            if (File.Exists(ruta))
-                return GuardarComo(ruta, texto);
+            try
+            {
+                if (base.ValidarArchivo(ruta, true))
+                    return GuardarComo(ruta, texto);
+            }
+            catch (ArchivoIncorrectoException)
+            {
+
+            }
             return false;
         }
 
@@ -44,12 +53,19 @@ namespace Ejercicio_Nro_58
 
         public string Leer(string ruta)
         {
-            if (File.Exists(ruta))
+            try
             {
-                StreamReader archivo = new StreamReader(ruta);
-                string texto = archivo.ReadToEnd();
-                archivo.Close();
-                return texto;
+                if (base.ValidarArchivo(ruta, true))
+                {
+                    StreamReader archivo = new StreamReader(ruta);
+                    string texto = archivo.ReadToEnd();
+                    archivo.Close();
+                    return texto;
+                }
+            }
+            catch (ArchivoIncorrectoException)
+            {
+
             }
             return null;
         }

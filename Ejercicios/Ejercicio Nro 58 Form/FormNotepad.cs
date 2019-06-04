@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Ejercicio_Nro_58;
 
 namespace Ejercicio_Nro_56
 {
@@ -42,9 +43,20 @@ namespace Ejercicio_Nro_56
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 path = openFileDialog.FileName;
-                StreamReader archivo = new StreamReader(path);
-                mainRichTextBox.Text = archivo.ReadToEnd();
-                archivo.Close();
+                switch (openFileDialog.FilterIndex)
+                {
+                    case 1:
+                        mainRichTextBox.Text = new PuntoTxt().Leer(openFileDialog.FileName);
+                        break;
+                    case 2:
+                        PuntoDat puntoDat = new PuntoDat();
+                        puntoDat = puntoDat.Leer(openFileDialog.FileName);
+                        mainRichTextBox.Text = puntoDat.Contenido;
+                        break;
+                    //case 3:
+                    //    richTextBox1.Text = archivoXml.Leer(ventana.FileName); //REVISAR
+                    //    break;
+                }
             }
         }
 
@@ -66,15 +78,39 @@ namespace Ejercicio_Nro_56
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 path = saveFileDialog.FileName;
-                guardar();
+                switch (saveFileDialog.FilterIndex)
+                {
+                    case 1:
+                        new PuntoTxt().GuardarComo(path, mainRichTextBox.Text);
+                        break;
+                    case 2:
+                        PuntoDat puntoDat = new PuntoDat();
+                        puntoDat.Contenido = mainRichTextBox.Text;
+                        puntoDat.GuardarComo(path, puntoDat);
+                        break;
+                    //case 3:
+                    //    archivoXml.GuardarComo(ventana.FileName, richTextBox1.Text);
+                    //    break;
+                }
             }
         }
 
         private void guardar()
         {
-            StreamWriter archivo = new StreamWriter(path);
-            archivo.Write(mainRichTextBox.Text);
-            archivo.Close();
+            switch (Path.GetExtension(path))
+            {
+                case ".txt":
+                    new PuntoTxt().Guardar(path, mainRichTextBox.Text);
+                    break;
+                case ".dat":
+                    PuntoDat puntoDat = new PuntoDat();
+                    puntoDat.Contenido = mainRichTextBox.Text;
+                    puntoDat.Guardar(path, puntoDat);
+                    break;
+                    //case ".xml":
+                    //    archivoXml.Guardar(nombreArchivo, richTextBox1.Text);
+                    //    break;
+            }
         }
     }
 }

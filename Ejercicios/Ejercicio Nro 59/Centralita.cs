@@ -9,7 +9,7 @@ namespace CentralitaHerencia
 {
     public class Centralita : IGuardar<string>
     {
-        //ESTO SE GUARDA EN Ejercicio55\bin\Debug
+        //ESTO SE GUARDA EN Ejercicio59\bin\Debug
         private const string PATH_TXT = "LogCentralita2.txt";
 
         private List<Llamada> listaDeLlamadas;
@@ -26,7 +26,6 @@ namespace CentralitaHerencia
             {
                 rutaDeArchivo = value;
             }
-
         }
 
         public float GananciasPorLocal
