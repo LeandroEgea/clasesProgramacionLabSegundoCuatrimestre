@@ -22,7 +22,8 @@ namespace Test
 
             l1.Guardar();
             l2.Guardar();
-            //Console.WriteLine(l1.Leer().ToString());
+            Console.WriteLine(l1.Leer().ToString());
+            Console.WriteLine(l2.Leer().ToString());
 
 
             // Las llamadas se irán registrando en la Centralita. 

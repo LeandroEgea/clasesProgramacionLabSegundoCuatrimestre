@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio_Nro_58
 {
+    [Serializable]
     public abstract class Archivo
     {
         protected virtual bool ValidarArchivo(string ruta, bool validaExistencia)

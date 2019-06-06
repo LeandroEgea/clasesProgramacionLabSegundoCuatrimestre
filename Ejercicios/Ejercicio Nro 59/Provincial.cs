@@ -23,15 +23,15 @@ namespace CentralitaHerencia
         protected Franja franjaHoraria;
         private string rutaDeArchivo;
 
-        public float Costo
+        public Franja FranjaHoraria
         {
             get
             {
-                return CalcularCosto();
+                return franjaHoraria;
             }
             set
             {
-
+                franjaHoraria = value;
             }
         }
 
@@ -57,7 +57,7 @@ namespace CentralitaHerencia
 
         private Provincial() : base()
         {
-
+            this.RutaDeArchivo = PATH_TXT;
         }
 
         public Provincial(Franja miFranja, Llamada llamada) : this(llamada.NroOrigen, miFranja, llamada.Duracion, llamada.NroDestino)
@@ -82,9 +82,15 @@ namespace CentralitaHerencia
 
         public Provincial Leer()
         {
+            Provincial provincial;
             XmlTextReader reader = new XmlTextReader(RutaDeArchivo);
             XmlSerializer ser = new XmlSerializer(typeof(Provincial));
-            Provincial provincial = (Provincial)ser.Deserialize(reader); // TODO meter la exception
+            Object obj = ser.Deserialize(reader);
+            if (obj is Provincial)
+                provincial = (Provincial)obj;
+            else
+                throw new InvalidCastException();
+            //Provincial provincial = (Provincial)ser.Deserialize(reader);
             reader.Close();
             return provincial;
         }

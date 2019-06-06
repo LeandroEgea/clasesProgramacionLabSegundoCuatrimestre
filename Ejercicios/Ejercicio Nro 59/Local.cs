@@ -20,11 +20,11 @@ namespace CentralitaHerencia
         {
             get
             {
-                return CalcularCosto();
+                return costo;
             }
             set
             {
-
+                costo = value;
             }
         }
 
@@ -50,7 +50,7 @@ namespace CentralitaHerencia
 
         private Local() : base()
         {
-
+            this.RutaDeArchivo = PATH_TXT;
         }
 
         public Local(Llamada llamada, float costo) : this(llamada.NroOrigen, llamada.Duracion, llamada.NroDestino, costo)
@@ -75,9 +75,15 @@ namespace CentralitaHerencia
 
         public Local Leer()
         {
+            Local local;
             XmlTextReader reader = new XmlTextReader(RutaDeArchivo);
             XmlSerializer ser = new XmlSerializer(typeof(Local));
-            Local local = (Local)ser.Deserialize(reader); // TODO meter la exception
+            Object obj = ser.Deserialize(reader);
+            if (obj is Local)
+                local = (Local)obj;
+            else
+                throw new InvalidCastException();
+            //Local local = (Local)ser.Deserialize(reader);
             reader.Close();
             return local;
         }

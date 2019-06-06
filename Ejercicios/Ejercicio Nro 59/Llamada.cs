@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace CentralitaHerencia
 {
+    [XmlInclude(typeof(Local))]
+    [XmlInclude(typeof(Provincial))]
     public abstract class Llamada
     {
 
@@ -28,6 +31,10 @@ namespace CentralitaHerencia
             {
                 return this.duracion;
             }
+            set
+            {
+                duracion = value;
+            }
         }
 
         public string NroDestino
@@ -36,6 +43,10 @@ namespace CentralitaHerencia
             {
                 return this.nroDestino;
             }
+            set
+            {
+                nroDestino = value;
+            }
         }
 
         public string NroOrigen
@@ -43,6 +54,10 @@ namespace CentralitaHerencia
             get
             {
                 return this.nroOrigen;
+            }
+            set
+            {
+                nroOrigen = value;
             }
         }
 
