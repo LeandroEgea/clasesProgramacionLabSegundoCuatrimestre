@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Ejercicio_Nro_64
 {
@@ -21,6 +22,12 @@ namespace Ejercicio_Nro_64
         public Caja()
         {
             filaDeClientes = new List<string>();
+        }
+
+        public void AtenderClientes()
+        {
+            //Thread thread = new Thread(new ParameterizedThreadStart());
+            //TODO
         }
     }
 }
