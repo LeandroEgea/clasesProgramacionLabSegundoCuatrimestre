@@ -26,11 +26,6 @@ namespace Ejercicio_Nro_63
         //    AsignarHora();
         //}
 
-        //private void AsignarHora()
-        //{
-        //    lblHora.Text = DateTime.Now.ToString();
-        //}
-
         //private void Form1_Activated(object sender, EventArgs e)
         //{
         //    while(true)
@@ -40,6 +35,11 @@ namespace Ejercicio_Nro_63
         //    }
         //}
 
+        //private void AsignarHora()
+        //{
+        //    lblHora.Text = DateTime.Now.ToString();
+        //}
+        
         //------------------2------------------
 
         //private void Form1_Load(object sender, EventArgs e)
@@ -60,21 +60,44 @@ namespace Ejercicio_Nro_63
         //}
 
         //------------------3------------------
-        //No se como anda, pero anda
 
-        //private void Form1_Load(object sender, EventArgs e)
-        //{
-        //    AsignarHora();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString();
+        }
 
-        //    lblHora.Text = DateTime.Now.ToString();
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+            Thread hilo = new Thread(AsignarHora);
+            hilo.Start();
+        }
 
-        //    Thread hilo = new Thread(AsignarHora);
-        //    hilo.Start();
-        //}
-
-        //private void AsignarHora()
-        //{
-        //    lblHora.Text = DateTime.Now.ToString();
-        //}
+        private void AsignarHora()
+        {
+            if (lblHora.InvokeRequired)
+            {
+                lblHora.BeginInvoke((MethodInvoker)delegate ()
+                {
+                    while (true)
+                    {
+                        Thread.Sleep(1000);
+                        lblHora.Text = DateTime.Now.ToString();
+                    }
+                });
+            }
+            else
+            {
+                while (true)
+                {
+                    Thread.Sleep(1000);
+                    lblHora.Text = DateTime.Now.ToString();
+                }
+            }
+            //while (true)
+            //{
+            //    Thread.Sleep(1000);
+            //    lblHora.Text = DateTime.Now.ToString();
+            //}
+        }
     }
 }

@@ -26,8 +26,11 @@ namespace Ejercicio_Nro_64
 
         public void AtenderClientes()
         {
-            //Thread thread = new Thread(new ParameterizedThreadStart());
-            //TODO
+            foreach (string cliente in filaDeClientes)
+            {
+                Thread.Sleep(2000);
+                Console.WriteLine(cliente); // +name
+            }
         }
     }
 }

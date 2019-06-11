@@ -29,15 +29,37 @@ namespace Ejercicio_Nro_64
             }
         }
 
+        public List<string> Clientes
+        {
+            get
+            {
+                return clientes;
+            }
+        }
+
         public Negocio(Caja cj1, Caja cj2)
         {
+            clientes = new List<string>();
             caja1 = cj1;
             caja2 = cj2;
         }
 
         public void AsignarCaja()
         {
-            //TODO
+            Console.WriteLine("Asignando cajas...");
+            if(Clientes.Count > 0)
+            {
+                Thread.Sleep(1000);
+                if (Caja1.FilaClientes.Count > Caja2.FilaClientes.Count)
+                {
+                    Caja2.FilaClientes.Add(Clientes[0]);
+                }
+                else
+                {
+                    Caja1.FilaClientes.Add(Clientes[0]);
+                }
+                Clientes.RemoveAt(0); //???
+            }
         }
     }
 }
