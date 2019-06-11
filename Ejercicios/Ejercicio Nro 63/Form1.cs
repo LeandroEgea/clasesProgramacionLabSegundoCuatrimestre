@@ -19,24 +19,26 @@ namespace Ejercicio_Nro_63
         }
 
         //------------------1------------------ //TODO
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            AsignarHora();
-        }
+        //Se queda trabado
 
-        private void AsignarHora()
-        {
-            lblHora.Text = DateTime.Now.ToString();
-        }
+        //private void Form1_Load(object sender, EventArgs e)
+        //{
+        //    AsignarHora();
+        //}
 
-        private void Form1_Activated(object sender, EventArgs e)
-        {
-            while(true)
-            {
-                Thread.Sleep(1000);
-                AsignarHora();
-            }
-        }
+        //private void AsignarHora()
+        //{
+        //    lblHora.Text = DateTime.Now.ToString();
+        //}
+
+        //private void Form1_Activated(object sender, EventArgs e)
+        //{
+        //    while(true)
+        //    {
+        //        Thread.Sleep(1000);
+        //        AsignarHora();
+        //    }
+        //}
 
         //------------------2------------------
 
@@ -57,6 +59,22 @@ namespace Ejercicio_Nro_63
         //    lblHora.Text = DateTime.Now.ToString();
         //}
 
-        //------------------2------------------//TODO
+        //------------------3------------------
+        //No se como anda, pero anda
+
+        //private void Form1_Load(object sender, EventArgs e)
+        //{
+        //    AsignarHora();
+
+        //    lblHora.Text = DateTime.Now.ToString();
+
+        //    Thread hilo = new Thread(AsignarHora);
+        //    hilo.Start();
+        //}
+
+        //private void AsignarHora()
+        //{
+        //    lblHora.Text = DateTime.Now.ToString();
+        //}
     }
 }

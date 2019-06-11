@@ -10,6 +10,10 @@ namespace Ejercicio_Nro_64
     {
         static void Main(string[] args)
         {
+            Caja caja1 = new Caja();
+            Caja caja2 = new Caja();
+            //???
+            Negocio negocio = new Negocio(caja1, caja2);
 
         }
     }

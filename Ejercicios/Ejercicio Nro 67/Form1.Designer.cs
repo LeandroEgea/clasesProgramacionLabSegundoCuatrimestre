@@ -1,4 +1,4 @@
-﻿namespace Ejercicio_Nro_63
+﻿namespace Ejercicio_Nro_67
 {
     partial class Form1
     {
@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.lblHora = new System.Windows.Forms.Label();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -42,11 +40,6 @@
             this.lblHora.Size = new System.Drawing.Size(13, 13);
             this.lblHora.TabIndex = 0;
             this.lblHora.Text = "a";
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1000;
             // 
             // richTextBox
             // 
@@ -65,7 +58,6 @@
             this.Controls.Add(this.lblHora);
             this.Name = "Form1";
             this.Text = "Form1";
-            //this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -75,7 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblHora;
-        private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.RichTextBox richTextBox;
     }
 }
