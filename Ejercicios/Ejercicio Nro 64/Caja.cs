@@ -29,7 +29,7 @@ namespace Ejercicio_Nro_64
             foreach (string cliente in filaDeClientes)
             {
                 Thread.Sleep(2000);
-                Console.WriteLine(cliente); // +name
+                Console.WriteLine(cliente + " " + Thread.CurrentThread.Name);
             }
         }
     }

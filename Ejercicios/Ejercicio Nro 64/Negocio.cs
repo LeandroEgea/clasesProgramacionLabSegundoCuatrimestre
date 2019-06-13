@@ -47,19 +47,19 @@ namespace Ejercicio_Nro_64
         public void AsignarCaja()
         {
             Console.WriteLine("Asignando cajas...");
-            if(Clientes.Count > 0)
+            foreach (string cliente in clientes)
             {
                 Thread.Sleep(1000);
                 if (Caja1.FilaClientes.Count > Caja2.FilaClientes.Count)
                 {
-                    Caja2.FilaClientes.Add(Clientes[0]);
+                    Caja2.FilaClientes.Add(cliente);
                 }
                 else
                 {
-                    Caja1.FilaClientes.Add(Clientes[0]);
+                    Caja1.FilaClientes.Add(cliente);
                 }
-                Clientes.RemoveAt(0); //???
             }
+
         }
     }
 }

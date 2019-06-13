@@ -15,11 +15,10 @@ namespace Ejercicio_Nro_64
             Caja caja2 = new Caja();
             
             Negocio negocio = new Negocio(caja1, caja2);
-            for(int i = 0; i < 20; i++)
+            for(int i = 0; i < 10; i++)
             {
                 negocio.Clientes.Add("c" + i);
             }
-            //Estoy haciendo algo mal
 
             Thread hiloNegocio = new Thread(negocio.AsignarCaja);
             Thread hiloCaja1 = new Thread(caja1.AtenderClientes);
@@ -28,11 +27,11 @@ namespace Ejercicio_Nro_64
             hiloCaja2.Name = "Caja2";
 
             hiloNegocio.Start();
+            hiloNegocio.Join();
             hiloCaja1.Start();
             hiloCaja2.Start();
 
             Console.ReadKey();
-
         }
     }
 }
