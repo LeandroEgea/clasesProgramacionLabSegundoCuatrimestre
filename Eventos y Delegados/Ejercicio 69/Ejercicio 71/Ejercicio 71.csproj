@@ -51,6 +51,12 @@
     <Compile Include="FrmAltaAlumno.Designer.cs">
       <DependentUpon>FrmAltaAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDatosAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDatosAlumno.Designer.cs">
+      <DependentUpon>FrmDatosAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMostrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAltaAlumno.resx">
       <DependentUpon>FrmAltaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDatosAlumno.resx">
+      <DependentUpon>FrmDatosAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMostrar.resx">
       <DependentUpon>FrmMostrar.cs</DependentUpon>
@@ -104,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ejercicio 71 Entidades\Ejercicio 71 Entidades.csproj">
+      <Project>{2647ffdc-edfb-4cf2-8d15-2ead881439ac}</Project>
+      <Name>Ejercicio 71 Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

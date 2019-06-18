@@ -14,6 +14,9 @@ namespace Ejercicio_69
     {
         FrmTestDelegados frmTestDelegados;
         FrmMostrar frmMostrar;
+        FrmAltaAlumno frmAltaAlumno;
+        FrmDatosAlumno frmDatosAlumno;
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -36,6 +39,24 @@ namespace Ejercicio_69
             frmTestDelegados.EventoActualizar += frmMostrar.ActualizarNombre;
             frmTestDelegados.EventoActualizarFoto += frmMostrar.ActualizarFoto;
             frmMostrar.Show();
+        }
+
+        private void alumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaAlumno = new FrmAltaAlumno();
+            frmAltaAlumno.MdiParent = this;
+            frmAltaAlumno.Show();
+
+            datosAlumnoToolStripMenuItem.Enabled = true;
+        }
+
+        private void datosAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDatosAlumno = new FrmDatosAlumno();
+            frmDatosAlumno.MdiParent = this;
+
+            frmAltaAlumno.EventoAlumno += frmDatosAlumno.ActualizarAlumno;
+            frmDatosAlumno.Show();
         }
     }
 }

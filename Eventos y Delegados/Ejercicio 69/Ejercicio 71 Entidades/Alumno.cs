@@ -53,17 +53,20 @@ namespace Entidades
         {
             get
             {
-                return apellido;
+                return fotoAlumno;
             }
             set
             {
-                apellido = value;
+                fotoAlumno = value;
             }
         }
 
         public Alumno(string nombre, string apellido, int dni, string ruta)
         {
-
+            Nombre = nombre;
+            Apellido = apellido;
+            Dni = dni;
+            RutaDeLaFoto = ruta;
         }
     }
 }

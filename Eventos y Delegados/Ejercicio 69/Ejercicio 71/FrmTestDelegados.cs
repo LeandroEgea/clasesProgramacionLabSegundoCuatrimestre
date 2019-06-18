@@ -19,7 +19,7 @@ namespace Ejercicio_69
         public FrmTestDelegados()
         {
             InitializeComponent();
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures); ///??
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
