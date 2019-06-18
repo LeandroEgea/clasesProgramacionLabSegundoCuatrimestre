@@ -23,6 +23,5 @@ namespace Ejercicio_69
         {
             lblEtiqueta.Text = dato;
         }
-
     }
 }

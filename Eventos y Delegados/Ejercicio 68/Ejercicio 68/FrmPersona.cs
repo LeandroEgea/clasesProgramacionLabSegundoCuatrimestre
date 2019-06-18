@@ -14,10 +14,16 @@ namespace Ejercicio_68
     public partial class FrmPersona : Form
     {
         private Persona persona;
+        private event DelegadoString EventoForm;
 
         public FrmPersona()
         {
             InitializeComponent();
+        }
+
+        private void FrmPersona_Load(object sender, EventArgs e)
+        {
+            EventoForm += NotificarCambio;
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -40,21 +46,12 @@ namespace Ejercicio_68
                     EventoForm("Se ha actualizado la Persona");
                 }
             }
-
             EventoForm(persona.Mostrar());
-
         }
 
         public static void NotificarCambio(string cambio)
         {
             MessageBox.Show(cambio);
-        }
-
-        private event DelegadoString EventoForm;
-
-        private void FrmPersona_Load(object sender, EventArgs e)
-        {
-            EventoForm += NotificarCambio;
         }
     }
 }

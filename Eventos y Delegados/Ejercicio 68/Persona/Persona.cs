@@ -13,20 +13,15 @@ namespace Entidades
         private string apellido;
         private string nombre;
 
-        public Persona()
-        {
-
-        }
-
         public string Nombre
         {
             get
             {
-                return this.nombre;
+                return nombre;
             }
             set
             {
-                this.nombre = value;
+                nombre = value;
             }
         }
 
@@ -34,17 +29,17 @@ namespace Entidades
         {
             get
             {
-                return this.apellido;
+                return apellido;
             }
             set
             {
-                this.apellido = value;
+                apellido = value;
             }
         }
 
         public string Mostrar()
         {
-            return this.Nombre + " " + this.Apellido + "\n";
+            return String.Format("{0} {1}", Nombre, Apellido);
         }
 
     }

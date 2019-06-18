@@ -32,6 +32,7 @@ namespace Ejercicio_69
         {
             frmMostrar = new FrmMostrar();
             frmMostrar.MdiParent = this;
+
             frmTestDelegados.EventoActualizar += frmMostrar.ActualizarNombre;
             frmMostrar.Show();
         }
