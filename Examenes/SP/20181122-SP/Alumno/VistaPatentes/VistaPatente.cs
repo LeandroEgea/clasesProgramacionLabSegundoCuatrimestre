@@ -36,11 +36,12 @@ namespace Patentes
                     Random r = new Random();
 
                     // Llamar al hilo principal
-                    lblPatenteNro.BeginInvoke((MethodInvoker)delegate ()
-                    {
-                        picPatente.Image = fondosPatente.Images[(int)((Patente)patente).TipoCodigo];
-                        lblPatenteNro.Text = patente.ToString();
-                    });
+                    //lblPatenteNro.BeginInvoke((MethodInvoker)delegate ()
+                    //{
+                    //    picPatente.Image = fondosPatente.Images[(int)((Patente)patente).TipoCodigo];
+                    //    lblPatenteNro.Text = patente.ToString();
+                    //});
+                    lblPatenteNro.Invoke(new MostrarPatente(MostrarPatente), patente);
 
                     Thread.Sleep(r.Next(2000, 5000));
 

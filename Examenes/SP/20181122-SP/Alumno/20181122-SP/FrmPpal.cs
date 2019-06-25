@@ -40,40 +40,51 @@ namespace _20181122_SP
 
         private void btnXml_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-                new Xml<Queue<Patente>>().Leer(@"C:\patentes.xml", out cola);
-                cola = cola;
-            //}
-            //catch (Exception)
-            //{
-            //    //TODO
-            //}
+            try
+            {
+                List<Patente> lista;
+                new Xml<List<Patente>>().Leer(@"C:\zzz\patentes.xml", out lista);
+                cola = new Queue<Patente>(lista.AsEnumerable().Reverse());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            IniciarSimulacion();
         }
 
         private void btnTxt_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-                new Texto().Leer(@"C:\patentes.txt", out cola);
-                cola = cola;
-            //}
-            //catch (Exception)
-            //{
-            //    //TODO
-            //}
+            try
+            {
+                new Texto().Leer(@"C:\zzz\patentes.txt", out cola);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            IniciarSimulacion();
         }
 
         private void btnSql_Click(object sender, EventArgs e)
         {
             try
             {
-                //TODO
+                Sql sql = new Sql();
+                sql.Leer("Patentes", out cola);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                //TODO
+                MessageBox.Show(ex.Message);
             }
+            IniciarSimulacion();
+        }
+
+        private void IniciarSimulacion()
+        {
+            FinalizarSimulacion();
+            ProximaPatente(vistaPatente1);
+            ProximaPatente(vistaPatente2);
         }
 
         private void FinalizarSimulacion()
@@ -87,7 +98,12 @@ namespace _20181122_SP
 
         public void ProximaPatente(VistaPatente vp)
         {
-            //TODO
+            if (cola.Count > 0)
+            {
+                Thread t = new Thread(new ParameterizedThreadStart(vp.MostrarPatente));
+                t.Start(cola.Dequeue());
+                hilos.Add(t);
+            }
         }
     }
 }

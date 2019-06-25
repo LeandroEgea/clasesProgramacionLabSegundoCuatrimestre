@@ -31,8 +31,8 @@ namespace Archivos
 
         public void Leer(string archivo, out T datos)
         {
-            XmlTextReader reader = new XmlTextReader(archivo);
             XmlSerializer ser = new XmlSerializer(typeof(T));
+            XmlTextReader reader = new XmlTextReader(archivo);
             try
             {
                 datos = (T)ser.Deserialize(reader);

@@ -13,7 +13,7 @@ namespace Archivos
     {
         public void Guardar(string archivo, Queue<Patente> datos)
         {
-            StreamWriter writer = new StreamWriter(archivo, false); //???
+            StreamWriter writer = new StreamWriter(archivo, false);
             try
             {
                 foreach (Patente patente in datos)
@@ -34,7 +34,7 @@ namespace Archivos
         public void Leer(string archivo, out Queue<Patente> datos)
         {
             datos = new Queue<Patente>();
-            StreamReader reader = new StreamReader(archivo, Encoding.UTF8);
+            StreamReader reader = new StreamReader(archivo);
             try
             {
                 while(!reader.EndOfStream)
