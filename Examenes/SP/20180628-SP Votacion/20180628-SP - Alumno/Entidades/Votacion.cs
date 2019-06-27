@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Excepciones;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -124,7 +125,14 @@ namespace Entidades
         }
         public void SerializarXml(string rutaArchivo)
         {
-            new SerializarXml<Votacion>().Guardar(rutaArchivo, this);
+            try
+            {
+                new SerializarXml<Votacion>().Guardar(rutaArchivo, this);
+            }
+            catch (Exception e)
+            {
+                throw new ErrorArchivoException("Error al guardar Votacion en XML", e);
+            }
         }
 
         public void GuardarEnDB(string tabla)
