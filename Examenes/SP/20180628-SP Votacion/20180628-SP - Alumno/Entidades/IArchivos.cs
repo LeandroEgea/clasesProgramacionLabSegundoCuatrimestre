@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public interface IEntradaSalida<Z>
+    public interface IArchivos<T>
     {
-        Z Leer();
-        Z Guardar();
+        T Leer(string rutaArchivo);
+        bool Guardar(string rutaArchivo, T objeto);
     }
 }
