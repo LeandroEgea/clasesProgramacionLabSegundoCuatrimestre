@@ -13,10 +13,12 @@ namespace Entidades
     {
         public bool Guardar(string rutaArchivo, T objeto)
         {
-            XmlTextWriter writer = new XmlTextWriter(rutaArchivo, Encoding.UTF8);
-            XmlSerializer ser = new XmlSerializer(typeof(T));
+            XmlTextWriter writer = null;
+            XmlSerializer ser = null;
             try
             {
+                writer = new XmlTextWriter(rutaArchivo, Encoding.UTF8);
+                ser = new XmlSerializer(typeof(T));
                 ser.Serialize(writer, objeto);
             }
             catch (Exception e)
@@ -25,7 +27,10 @@ namespace Entidades
             }
             finally
             {
-                writer.Close();
+                if(writer != null)
+                {
+                    writer.Close();
+                }
             }
             return true;
         }
@@ -33,19 +38,24 @@ namespace Entidades
         public T Leer(string rutaArchivo)
         {
             T datos;
-            XmlSerializer ser = new XmlSerializer(typeof(T));
-            XmlTextReader reader = new XmlTextReader(rutaArchivo);
+            XmlSerializer ser = null;
+            XmlTextReader reader = null;
             try
             {
+                ser = new XmlSerializer(typeof(T));
+                reader = new XmlTextReader(rutaArchivo);
                 datos = (T)ser.Deserialize(reader);
             }
             catch (Exception e)
             {
-                throw new ErrorArchivoException("Error al leer des XML", e);
+                throw new ErrorArchivoException("Error al leer de XML", e);
             }
             finally
             {
-                reader.Close();
+                if (reader != null)
+                {
+                    reader.Close();
+                }
             }
             return datos;
         }

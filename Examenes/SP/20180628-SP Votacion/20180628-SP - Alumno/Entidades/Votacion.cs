@@ -125,14 +125,7 @@ namespace Entidades
         }
         public void SerializarXml(string rutaArchivo)
         {
-            try
-            {
-                new SerializarXml<Votacion>().Guardar(rutaArchivo, this);
-            }
-            catch (Exception e)
-            {
-                throw new ErrorArchivoException("Error al guardar Votacion en XML", e);
-            }
+            new SerializarXml<Votacion>().Guardar(rutaArchivo, this);
         }
 
         public void GuardarEnDB(string tabla)

@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Entidades;
 using Excepciones;
 using System.Collections.Generic;
+using static Entidades.Votacion;
 
 namespace Test
 {
@@ -31,15 +32,28 @@ namespace Test
             //ARRANGE
             Dictionary<string, Votacion.EVoto> diccionario;
             Votacion votacion;
+            int contador = 0;
 
-            //ACT
+            //INITIALIZE
             diccionario = new Dictionary<string, Votacion.EVoto>();
             diccionario.Add("s1", Votacion.EVoto.Afirmativo);
             diccionario.Add("s2", Votacion.EVoto.Negativo);
             diccionario.Add("s3", Votacion.EVoto.Abstencion);
             votacion = new Votacion("Ley123", diccionario);
 
+            //ACT
+            votacion.EventoVotoEfectuado += MiContador;
+            votacion.Simular();
+
+            void MiContador(string senador, EVoto voto)
+            {
+                contador++;
+            }
+
             //ASSERT
+            Assert.AreEqual(3, contador);
         }
+
+
     }
 }
