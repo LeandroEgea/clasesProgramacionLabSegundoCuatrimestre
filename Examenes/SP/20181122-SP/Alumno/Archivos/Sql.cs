@@ -17,7 +17,7 @@ namespace Archivos
 
         static Sql()
         {
-            string connectionStr = @"Data Source=.\SQLEXPRESS; Initial Catalog=msdb4; Integrated Security = True";
+            string connectionStr = @"Data Source=.\SQLEXPRESS; Initial Catalog=patentes-sp-2018; Integrated Security = True";
 
             try
             {
